@@ -50,6 +50,6 @@ Route::get('/genre/hapus/{id}', 'GenreController@hapus')->name('hapus_genre');
 Route::get('/gambar/{komik_id}/{ch}/{id}', 'GambarController@index')->name('gambar');
 Route::get('/gambar/tambah/{komik_id}/{ch}/{id}', 'GambarController@tambah')->name('tambah_gambar');
 Route::post('/gambar/store', 'GambarController@store')->name('store_gambar');
-Route::get('/gambar/ubah/{chapter_id}/{id}', 'GambarController@ubah');
+Route::get('/gambar/ubah/{komik_id}/{ch}/{id}/{gid}', 'GambarController@ubah');
 Route::post('/gambar/update/{id}', 'GambarController@update')->name('update_gambar');
 Route::get('/gambar/hapus/{komik_id}/{ch}/{id}', 'GambarController@hapus')->name('hapus_gambar');

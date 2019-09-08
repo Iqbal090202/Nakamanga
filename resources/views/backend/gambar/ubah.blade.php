@@ -8,7 +8,7 @@
                     CRUD Data Gambar - <strong>UBAH DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
                 </div>
                 <div class="card-body">
-                    <a href="/gambar/{{ $chapter_id }}" class="btn btn-primary">Kembali</a>
+                    <a href="/gambar/{{$komik_id}}/{{$ch}}/{{ $chapter_id }}" class="btn btn-primary">Kembali</a>
                     <br/>
                     <br/>
                     
@@ -17,7 +17,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <img src="/data_gambar/ch-{{$gambar->chapter_id}}/{{$gambar->nama_gambar}}" class="img-thumbnail img-fluid"><br>
+                            <img src="/data_gambar/komik-{{$komik_id}}/ch-{{$ch}}/{{$gambar->nama_gambar}}" class="img-thumbnail img-fluid"><br>
                             <label>File Gambar</label>
                             <div class="custom-file">
                                 <input type="file" name="file" class="custom-file-input" id="customFile" value="{{ $gambar->nama_gambar }}">
@@ -30,6 +30,9 @@
                                 </div>
                             @endif
 						</div>
+                        
+                        <input type="hidden" name="komik_id" class="form-control" value="{{ $komik_id }}">
+                        <input type="hidden" name="ch" class="form-control" value="{{ $ch }}">
                         <input type="hidden" name="chapter_id" class="form-control" value="{{ $chapter_id }}">
                     
                         <div class="form-group">

@@ -25,8 +25,8 @@
                                     {{ $errors->first('nama_genre')}}
                                 </div>
                             @endif
-						</div>
-                    
+                        </div>
+                        
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">
                         </div>

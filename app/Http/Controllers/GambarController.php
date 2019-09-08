@@ -44,11 +44,11 @@ class GambarController extends Controller
         return redirect(route('gambar', ['komik_id'=>$request->komik_id,'ch'=>$request->ch,'id'=>$request->chapter_id])); 
     }
 
-    public function ubah($ch_id, $id)
+    public function ubah($komik_id, $ch, $id, $gid)
     {
-        $gambar = Gambar::find($id);
+        $gambar = Gambar::find($gid);
 
-        return view('/backend/gambar/ubah', ['gambar' => $gambar, 'chapter_id' => $ch_id]);
+        return view('/backend/gambar/ubah', ['gambar' => $gambar, 'komik_id' => $komik_id, 'ch' => $ch, 'chapter_id' => $id]);
     }
 
     public function update($id, Request $request)
@@ -58,14 +58,14 @@ class GambarController extends Controller
 		$nama_gambar = time()."_".$file->getClientOriginalName();
 
       	// isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload = 'data_gambar/ch-'.$request->chapter_id;
+		$tujuan_upload = 'data_gambar/komik-'.$request->komik_id.'/ch-'.$request->ch;
 		$file->move($tujuan_upload,$nama_gambar);
 
         $gambar = Gambar::find($id);
         $gambar->nama_gambar = $nama_gambar;
         $gambar->save();
 
-        return redirect(route('gambar', ['id' => $request->chapter_id])); 
+        return redirect(route('gambar', ['komik_id'=>$request->komik_id,'ch'=>$request->ch,'id'=>$request->chapter_id])); 
     }
 
     public function hapus($komik_id, $ch, $id)
