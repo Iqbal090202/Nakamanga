@@ -26,7 +26,7 @@ class ChapterController extends Controller
             <td class="text-center" id="judul"><?= $c->ch ?></td>
             <td class="text-center" id="judul"><?= $c->link_file ?></td>
             <td class="text-center">
-                <a href="/gambar/{{ $c->komik_id }}/{{ $c->ch }}/{{ $c->id }}" class="btn btn-info text-white">Lihat</a>
+                <a href="/gambar/<?= $c->komik_id ?>/<?= $c->ch ?>/<?= $c->id ?>" class="btn btn-info text-white">Lihat</a>
                 <a href="/chapter/ubah/<?= $c->id ?>" class="btn btn-warning text-white editBuku">Edit</a>
                 <a href="/chapter/hapus/<?= $c->id ?>" class="btn btn-danger">Hapus</a>
             </td>

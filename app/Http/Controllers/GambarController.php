@@ -41,7 +41,7 @@ class GambarController extends Controller
             'nama_gambar' => $nama_gambar,
         ]);
 
-        return redirect(route('gambar', ['id' => $request->chapter_id])); 
+        return redirect(route('gambar', ['komik_id'=>$request->komik_id,'ch'=>$request->ch,'id'=>$request->chapter_id])); 
     }
 
     public function ubah($ch_id, $id)
