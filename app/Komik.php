@@ -14,4 +14,9 @@ class Komik extends Model
     {
         return $this->hasMany('App\Chapter');
     }
+
+    public function genre()
+    {
+        return $this->belongsToMany('App\Genre');
+    }
 }

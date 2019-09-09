@@ -87,7 +87,7 @@
             @yield('isi')
         </main>
     </div>
-    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/popper.js') }}"></script>
     <script src="{{ asset('DataTables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('DataTables/dataTables.bootstrap4.min.js') }}"></script>

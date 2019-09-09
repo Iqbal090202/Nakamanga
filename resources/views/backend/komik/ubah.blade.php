@@ -61,6 +61,15 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="genre">Genre</label>
+                            <select class="selectpicker" multiple name="genre[]" data-width="100%">
+                                @foreach ($genre as $g)
+                                    <option value="{{$g->id}}">{{$g->nama_genre}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">
                         </div>
 

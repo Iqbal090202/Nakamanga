@@ -27,6 +27,7 @@ Route::get('/komik/ubah/{id}', 'KomikController@ubah');
 Route::post('/komik/update/{id}', 'KomikController@update')->name('update_komik');
 Route::get('/komik/hapus/{id}', 'KomikController@hapus')->name('hapus_komik');
 Route::get('/komik/complete/{id}', 'KomikController@complete');
+Route::post('komik/setGenretoKomik', 'KomikController@setGenre');
 
 // chapter
 Route::get('/chapter', 'ChapterController@index')->name('chapter');
