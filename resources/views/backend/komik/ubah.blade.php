@@ -12,7 +12,7 @@
                     <br/>
                     <br/>
                     
-                <form method="post" action="/komik/update/{{ $komik->id }}">
+                <form method="post" action="/komik/update/{{ $komik->id }}"  enctype="multipart/form-data">
 
                         {{ csrf_field() }}
 
@@ -68,6 +68,21 @@
                                 @endforeach
                             </select>
                         </div>
+
+                        <div class="form-group">
+                            <img src="/data_gambar/cover/{{$komik->cover}}" class="img-thumbnail img-fluid"><br>
+                            <label>File Gambar</label>
+                            <div class="custom-file">
+                                <input type="file" name="file" class="custom-file-input" id="cover" value="{{ $komik->cover }}">
+                                <label class="custom-file-label" for="cover">Pilih Cover</label>
+                            </div>
+
+                            @if($errors->has('file'))
+                                <div class="text-danger">
+                                    {{ $errors->first('file')}}
+                                </div>
+                            @endif
+						</div>
 
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">

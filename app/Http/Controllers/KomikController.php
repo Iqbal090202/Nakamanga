@@ -9,6 +9,8 @@ use App\Komik;
 use App\Komik_Genre;
 use App\Genre;
 
+use File;
+
 class KomikController extends Controller
 {
     public function __construct()
@@ -31,12 +33,21 @@ class KomikController extends Controller
 
     public function store(Request $request)
     {
+        $file = $request->file('file');
+
+		$cover = time().$request->judul_komik."-".$file->getClientOriginalName();
+
+      	// isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_gambar/cover';
+		$file->move($tujuan_upload,$cover); 
+
         Komik::create([
             'judul_komik' => $request->judul_komik,
             'sinopsis' => $request->sinopsis,
             'author' => $request->author,
             'status' => 'ongoing',
-            'tahun' => $request->tahun
+            'tahun' => $request->tahun,
+            'cover' => $cover,
         ]);
         $komik = Komik::where('judul_komik', $request->judul_komik)->first();
 
@@ -69,11 +80,20 @@ class KomikController extends Controller
 
     public function update($id, Request $request)
     {
+        $file = $request->file('file');
+
+		$cover = time().$request->judul_komik."-".$file->getClientOriginalName();
+
+      	// isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_gambar/cover';
+		$file->move($tujuan_upload,$cover); 
+
         $komik = Komik::find($id);
         $komik->judul_komik = $request->judul_komik;
         $komik->sinopsis = $request->sinopsis;
         $komik->author = $request->author;
         $komik->tahun = $request->tahun;
+        $komik->cover = $cover;
         $komik->save();
 
         $k = Komik::where('judul_komik', $request->judul_komik)->first();
@@ -93,7 +113,9 @@ class KomikController extends Controller
 
     public function hapus($id)
     {
+
         $komik = Komik::find($id);
+	    File::delete('data_gambar/cover/'.$komik->judul_komik);
         $komik->delete();
 
         $komik_genre = Komik_Genre::where('komik_id', $id)->get();

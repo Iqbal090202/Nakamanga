@@ -8,7 +8,7 @@ class Komik extends Model
 {
     protected $table = 'komik';
 
-    protected $fillable = ['judul_komik', 'sinopsis', 'author', 'tahun'];
+    protected $fillable = ['judul_komik', 'sinopsis', 'author', 'tahun', 'cover'];
 
     public function chapter()
     {

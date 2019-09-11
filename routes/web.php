@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// ---------------- Backend ------------------- //
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -54,3 +56,11 @@ Route::post('/gambar/store', 'GambarController@store')->name('store_gambar');
 Route::get('/gambar/ubah/{komik_id}/{ch}/{id}/{gid}', 'GambarController@ubah');
 Route::post('/gambar/update/{id}', 'GambarController@update')->name('update_gambar');
 Route::get('/gambar/hapus/{komik_id}/{ch}/{id}', 'GambarController@hapus')->name('hapus_gambar');
+
+// ------------------------- frontend -------------------------- //
+
+Route::get('/nakamanga', 'NakamangaController@index');
+Route::get('/nakamanga/manga', 'NakamangaController@manga');
+Route::get('/nakamanga/genre', 'NakamangaController@genre');
+Route::get('/nakamanga/inmanga', 'NakamangaController@inmanga');
+Route::get('/nakamanga/baca', 'NakamangaController@baca');
