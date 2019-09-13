@@ -19,4 +19,14 @@ class Komik extends Model
     {
         return $this->belongsToMany('App\Genre');
     }
+
+    public function scopePopular($query)
+    {
+        return $query->where('votes', '>', 100);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', 1);
+    }
 }

@@ -11,10 +11,14 @@ class ChapterController extends Controller
 {
     public function index()
     {
-        $chapter = Chapter::where('komik_id', 1)->get();
         $komik = Komik::all();
-
-        return view('/backend/chapter/index', ['chapter' => $chapter, 'komik' => $komik]);
+        $kom = Komik::get()->first();
+        $chapter = Chapter::where('komik_id', $kom->id)->get();
+        return view('/backend/chapter/index', [
+            'chapter' => $chapter, 
+            'komik' => $komik,
+            'kom' => $kom
+        ]);
     }
 
     public function ambilKomik($id)

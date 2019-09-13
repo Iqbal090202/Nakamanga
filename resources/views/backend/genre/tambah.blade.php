@@ -17,7 +17,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label>Judul Komuk</label>
+                            <label>Nama Genre</label>
                             <input type="text" name="nama_genre" class="form-control" placeholder="Nama genre ..">
 
                             @if($errors->has('nama_genre'))

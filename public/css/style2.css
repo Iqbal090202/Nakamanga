@@ -1,0 +1,303 @@
+a {
+    color: #8365bc;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    background-image: url('/img/bgnewww.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*Header Start*/
+#nav_head {
+    background-color: #002155;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-brand>img {
+    height: 100%;
+    padding: 3px;
+    width: 100px;
+}
+
+.example4 .navbar-brand>img {
+    padding: 7px 14px;
+}
+
+/*populer Start*/
+
+.text-on-pannel {
+    background: #fff none repeat scroll 0 0;
+    height: auto;
+    margin-left: 20px;
+    padding: 3px 5px;
+    position: absolute;
+    margin-top: -47px;
+    border: 1px solid #337ab7;
+    border-radius: 8px;
+}
+
+.panel {
+    /* for text on pannel */
+    margin-top: 27px !important;
+}
+
+.panel-body {
+    padding-top: 30px !important;
+}
+
+#bungkus {
+    background-color: #002155;
+    color: #8365bc;
+}
+
+#bungkus>.card-body {
+    border-top: 2px solid #8365bc;
+}
+
+/*populer End*/
+
+/*Header End*/
+
+/*Footer Start*/
+
+
+/*Footer End*/
+
+#populer {
+    background: #002155;
+    border: 1px solid #002155;
+}
+
+#populer2 {
+    color: #8365bc;
+    background: #002155;
+    border: 1px solid #002155;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+#populer4 {
+    color: #8365bc;
+    background: #002155;
+    border: 1px solid #002155;
+}
+
+#populer3 {
+    color: #8365bc;
+    background: #1D1B26;
+    border-bottom: 1px solid #312f40;
+}
+
+#search {
+    background: #00183e;
+    border: 1px solid #00183e;
+}
+
+#title_manga>a {
+    color: #8365bc;
+    font-family: heebo, sans-serif;
+    font-size: 17px;
+}
+
+#genre_manga,
+#genre_manga>a {
+    color: #fff;
+    font-size: 14px;
+}
+
+#judul_manga {
+    color: #8365bc;
+    border-bottom: 2px solid #8365bc;
+}
+
+.list_genre {
+    background: #002155;
+    border: 1px solid #002155;
+}
+
+.btn-warning {
+    color: white;
+    background-color: #060af8;
+    border-color: #060af8;
+}
+
+#linkNavbar>.active>a,
+#linkNavbar>.active>a:focus,
+#linkNavbar>.active>a:hover {
+    color: #fff;
+    background-color: #8e0000;
+    border-radius: 5px;
+}
+
+#linkNavbar>li {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+#unduh {
+    padding: 2px 8px 2px 8px;
+}
+
+/* Darker background on mouse-over */
+.unduh:hover {
+    background-color: RoyalBlue;
+}
+
+.next {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 2px 8px 2px 8px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 3px;
+    font-family: Arial Rounded MT Bold;
+}
+
+/* Darker background on mouse-over */
+.next:hover {
+    background-color: RoyalBlue;
+}
+
+#myFooter {
+    background-color: #002155;
+    color: white;
+    border-top: 1px solid #000;
+}
+
+#myFooter .row {
+    margin-bottom: 5px;
+}
+
+#myFooter .info {
+    text-align: justify;
+    color: #afb0b1;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter .logo {
+    margin-top: 10px;
+}
+
+#myFooter .second-bar .logo a {
+    color: white;
+    font-size: 28px;
+    float: left;
+    font-weight: bold;
+    line-height: 68px;
+    margin: 0;
+    padding: 0;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .second-bar {
+    text-align: center;
+    background-color: #33373e;
+    text-align: center;
+}
+
+#myFooter .second-bar a {
+    font-size: 22px;
+    color: #9fa3a9;
+    padding: 10px;
+    transition: 0.2s;
+    line-height: 68px;
+}
+
+#myFooter .second-bar a:hover {
+    text-decoration: none;
+}
+
+#myFooter .social-icons {
+    float: right;
+}
+
+
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+
+    #myFooter .info {
+        text-align: center;
+    }
+}
+
+
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    min-height: 200px;
+}
+
+#myFooter {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+#img_footer {
+    padding-top: 30px;
+    padding-left: 50px;
+}

@@ -59,8 +59,8 @@ Route::get('/gambar/hapus/{komik_id}/{ch}/{id}', 'GambarController@hapus')->name
 
 // ------------------------- frontend -------------------------- //
 
-Route::get('/nakamanga', 'NakamangaController@index');
-Route::get('/nakamanga/manga', 'NakamangaController@manga');
-Route::get('/nakamanga/genre', 'NakamangaController@genre');
-Route::get('/nakamanga/inmanga', 'NakamangaController@inmanga');
-Route::get('/nakamanga/baca', 'NakamangaController@baca');
+Route::get('/', 'NakamangaController@index')->name('frontHome');
+Route::get('/list_genre', 'ListGenreController@index')->name('list_genre');
+Route::get('/manga', 'MangaController@index')->name('manga');
+Route::get('/detail/{id}', 'MangaController@detail')->name('detail');
+Route::get('/baca/{komik_id}/{id}', 'MangaController@baca');

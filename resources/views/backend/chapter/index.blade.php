@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Chapter Komik</h5>
-                        <a class="btn btn-primary" id="tambahCh" href="{{route('tambah_chapter', ['id' => 1])}}">Tambah Chapter</a>
+                        <a class="btn btn-primary" id="tambahCh" href="{{route('tambah_chapter', ['id' => $kom->id])}}">Tambah Chapter</a>
                         <br>
                         <div class="text-center pt-3 pb-3">
                             <Label for="selectKomik" class="font-weight-bold">Komik : </Label>
