@@ -53,10 +53,9 @@
 @yield('konten')
 
 
-<br><br><br>
  <!-- Footer Start -->
 
- <footer id="myFooter">
+ <footer id="myFooter" class="mt-4">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
