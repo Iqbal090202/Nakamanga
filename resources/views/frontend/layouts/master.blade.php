@@ -32,7 +32,7 @@
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/manga">Daftar Manga</a>
+          <a class="nav-link" href="/manga">Manga</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/list_genre">List Genre</a>

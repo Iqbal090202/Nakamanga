@@ -13,7 +13,13 @@
 <div class="container isiDasar">
   <div class="row mt-3">
     <div class="col-md-8">
-      <div id="banner" class="carousel slide" data-ride="carousel">
+
+      <div class="card" id="card_banner">
+        <div class="card-header" id="banner_top">
+          <h4>Top Manga</h4>
+        </div>
+        <div class="card-body" id="banner_home">
+                <div id="banner" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="img/kaguya.jpg" alt="First slide">
@@ -34,18 +40,24 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+        </div>
+      </div>
+
+
     <br>
     <!-- Content Start -->
   
   <div class="card mb-4" id="bungkus">
-    <div class="card-header">
+    <div class="card-header" id="banner_top">
       <h4 class="card-title">Manga Terupdate</h4>
     </div>
     <div class="card-body">
       <div class="row">
         @foreach ($komik as $k)
-          <div class="col-md-3 mb-3">
-              <a href="{{route('detail', ['id'=>$k->id])}}"><img src="/data_gambar/cover/{{$k->cover}}" width="100%" height="250"></a>
+          <div class="col-md-4">
+            <div class="text-center">
+              <a href="{{route('detail', ['id'=>$k->id])}}"><img src="/data_gambar/cover/{{$k->cover}}" width="170" height="250"></a>
+            </div>
               <div id="title_manga" class="mb-1"><a href="{{route('detail', ['id'=>$k->id])}}">{{$k->judul_komik}}</a>
               </div>
               <div id="genre_manga">
@@ -63,101 +75,24 @@
 </div>
 
 <!-- Populer Start -->
-  <div class="col-md-4">
-    
-    <div class="panel panel-primary" id="populer">
-    <div class="panel-body">
-      <h3 class="text-on-pannel" id="populer2"><strong class="text-uppercase"> Populer </strong></h3>
-      <ul>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li> 
-      </ul>
-    </div>
-    </div>
+          <div class="col-md-3">
 
-  </div>
+                    <!-- Widget Ongoing Anime -->
+
+              <div class="card" id="manga_populer" style="width: 18rem;">
+                <div class="card-body" id="judul_panel">
+                  <h5 class="card-title">Manga Populer</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="#"><h6 class="font_panel">Cras justo odio</h6></a></li>
+                  <li class="list-group-item"><a href="#"><h6 class="font_panel">Shokugeki No Soma</h6></a></li>
+                  <li class="list-group-item"><a href="#"><h6 class="font_panel">Jojo Bizzare Adventure</h6></a></li>
+                </ul>
+              </div>
+
+                    <!-- Widget Ongoing Anime -->
+                    
+            </div>
   <!-- Populer END -->
 
 
@@ -168,6 +103,18 @@
 <!-- BANNER END -->
 
 <!-- 1 Start -->
+
+    
+
+<!-- 1 END -->
+
+
+
+
+
+</div>
+
+@endsection
 
     
 
