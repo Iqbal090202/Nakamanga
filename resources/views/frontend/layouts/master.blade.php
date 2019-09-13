@@ -15,12 +15,13 @@
 
   </head>
   <body>
-
 <!-- Header Start -->
 <div class="example3">
   <nav class="navbar stiky-top navbar-expand-lg navbar-dark" id="nav_head">
     <div class="container">
-      <img src="/img/NAKAMA_BARU.png" width="150" height="50" alt="">
+      <a href="{{route('frontHome')}}">
+        <img src="/img/NAKAMA_BARU.png" width="150" height="50" alt="Logo Nakamanga">
+      </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="mr-auto"></ul>
       <ul class="navbar-nav mr-2" id="linkNavbar">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">

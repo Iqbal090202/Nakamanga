@@ -69,90 +69,11 @@
     <div class="panel-body">
       <h3 class="text-on-pannel" id="populer2"><strong class="text-uppercase"> Populer </strong></h3>
       <ul>
+        @foreach ($komik2 as $k2)
         <li>
-          <a href="#">Shokugeki No Soma</a>
+          <a href="{{$k2->id}}">{{$k2->judul_komik}}</a>
         </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li>
-        <li>
-          <a href="#">Shokugeki No Soma</a>
-        </li> 
+        @endforeach
       </ul>
     </div>
     </div>

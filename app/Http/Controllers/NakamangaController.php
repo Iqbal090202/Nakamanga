@@ -11,7 +11,8 @@ class NakamangaController extends Controller
 {
 	public function index()
 	{
-		$komik = Komik::get();
-		return view('/frontend/index', ['komik' => $komik]);
+		$komik = Komik::orderBy('created_at', 'desc')->get();
+		$komik2 = Komik::orderBy('views', 'desc')->get();
+		return view('/frontend/index', ['komik' => $komik, 'komik2' => $komik2]);
 	}
 }

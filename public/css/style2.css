@@ -133,9 +133,7 @@ body {
     border-color: #060af8;
 }
 
-#linkNavbar>.active>a,
-#linkNavbar>.active>a:focus,
-#linkNavbar>.active>a:hover {
+#linkNavbar>.active>a{
     color: #fff;
     background-color: #8e0000;
     border-radius: 5px;

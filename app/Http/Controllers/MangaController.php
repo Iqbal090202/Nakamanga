@@ -27,8 +27,10 @@ class MangaController extends Controller
     public function detail($id)
     {
         $komik = Komik::find($id);
+        $komik->views = $komik->views + 1;
+        $komik->save();
+        
         $chapter = Chapter::where('komik_id', $id)->orderBy('ch', 'desc')->get();
-
         return view('/frontend/detail', [
             'komik' => $komik,
             'chapter' => $chapter
