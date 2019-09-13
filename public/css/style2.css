@@ -1,5 +1,6 @@
-a {
-    color: #8365bc;
+.list_populer {
+    color: #c2c2c2;
+    font-size: 14px;
 }
 
 a:hover {
@@ -7,7 +8,7 @@ a:hover {
 }
 
 body {
-    background-image: url('/img/bgnewww.png');
+    background-image: url('/img/bgnew2.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -58,11 +59,12 @@ body {
 #bungkus {
     background-color: #002155;
     color: #8365bc;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
 
-#bungkus>.card-body {
-    border-top: 2px solid #8365bc;
-}
 
 /*populer End*/
 
@@ -86,6 +88,7 @@ body {
     padding-left: 10px;
     padding-right: 20px;
     border-radius: 5px;
+    font-size: 24px;
 }
 
 #populer4 {
@@ -106,15 +109,57 @@ body {
 }
 
 #title_manga>a {
-    color: #8365bc;
+    color: #c2c2c2;
     font-family: heebo, sans-serif;
     font-size: 17px;
+}
+#title_manga>a:hover {
+    color: blue;
+}
+#judul_panel {
+    color:#8365bc;
+    background-color: #002155;
+    border-bottom: 2px solid #8365bc;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+#manga_populer{
+    border:solid 1px #002155;
+}
+.list-group-item:hover {
+    background-color: #00183e;
+    border:solid 1px #00183e;
+}
+.list-group-item {
+    background-color: #002155;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+.list-group-item a {
+    color:#8365bc;
+    
+}
+.list-group-item a:hover {
+    color:white;
+    
 }
 
 #genre_manga,
 #genre_manga>a {
-    color: #fff;
+    color: #c2c2c2;
     font-size: 14px;
+    padding-bottom: 10px;
+}
+#genre_manga,#title_manga{
+    padding-left: 20px;
+}
+#genre_manga>a:hover {
+    color: blue;
 }
 
 #judul_manga {
@@ -301,3 +346,20 @@ body {
     padding-top: 30px;
     padding-left: 50px;
 }
+#banner_home {
+  padding: 5px 5px 5px 5px;
+  background: #002155;
+}
+#card_banner {
+  border:solid 1px #002155;
+}
+#banner_top {
+    color:#8365bc;
+    background-color: #002155;
+    border-bottom: 2px solid #8365bc;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
