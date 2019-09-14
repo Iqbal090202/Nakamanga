@@ -8,7 +8,8 @@ use App\Komik;
 use App\Chapter;
 use App\User;
 use App\Gambar;
-use App\KomikGenre;
+use App\Komik_Genre;
+use App\Genre;
 
 class MangaController extends Controller
 {
@@ -50,5 +51,19 @@ class MangaController extends Controller
             'user' => $user,
             'gambar' => $gambar
         ]);
+    }
+
+    public function filter_c(Request $request)
+    {
+        $komik = Komik::where('judul_komik', 'like', '%'.$request->cari.'%')->get();
+        
+        return view('/frontend/manga', ['komik' => $komik]);
+    }
+
+    public function filter_g($g)
+    {
+        $genre = Genre::where('nama_genre', $g)->first();
+        $komik = $genre->komik;
+        return view('/frontend/manga', ['komik' => $komik]);
     }
 }

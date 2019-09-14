@@ -23,7 +23,7 @@
           @foreach ($genre as $g)
           <div class="col-md-6">
               <ul class="list-group" id="list_genre">
-                <li class="list-group-item list_genre"> <a href="{{$g->id}}">{{$g->nama_genre}}</a> </li>
+                <li class="list-group-item list_genre"> <a href="{{route('filter_genre', ['genre'=>$g->nama_genre])}}">{{$g->nama_genre}}</a> </li>
               </ul>
           </div>
           @endforeach

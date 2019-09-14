@@ -39,8 +39,9 @@
           <a class="nav-link" href="/list_genre">List Genre</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-lg-0" method="post" action="/filter">
+        {{ csrf_field() }}
+        <input id="search" class="form-control mr-sm-2" name="cari" type="search" placeholder="Cari Manga..." aria-label="Search">
         <button class="btn btn-warning" id="btnCari" type="submit">
           <i class="fa fa-search"></i>
         </button>
