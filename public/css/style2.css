@@ -361,3 +361,8 @@ body {
     padding-left: 5px;
 }
 
+.detail-komik>.list-group-item,
+.detail-komik>.list-group-item:hover {
+    border: 0; 
+    background-color: #002155;
+}

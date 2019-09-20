@@ -18,38 +18,28 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="/data_gambar/cover/{{$komik->cover}}" width="90%" height="450">
+                    <img class="img-fluid" src="/data_gambar/cover/{{$komik->cover}}" width="100%" height="450">
                 </div>
 
-                <div class="col-md-3 mt-5">
-                    <div id="title_manga">
-                        <h4>Author</h4>
-                        <h4>Date of release</h4>
-                        <h4>Status</h4>
-                        <h4>Genre</h4>
-                    </div>
-                </div>
-
-                <div class="col-md-1 mt-5">
-                    <div id="title_manga">
-                        <h4>:</h4>
-                        <h4>:</h4>
-                        <h4>:</h4>
-                        <h4>:</h4>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-5">
-                    <div id="title_manga">
-                        <h4>{{$komik->author}}</h4>
-                        <h4>{{$komik->tahun}}</h4>
-                        <h4>{{$komik->status}}</h4>
-                        <h4>
-                        @foreach ($komik->genre as $genre)
-                            {{$genre->nama_genre}},
-                        @endforeach
-                        </h4>
-                    </div>
+                <div class="col-md-8 mt-5">
+                    <ul class="list-group detail-komik">
+                        <li class="list-group-item">
+                            <h4>Author : {{$komik->author}}</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Date of release : {{$komik->tahun}}</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Status : {{$komik->status}}</h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Genre : 
+                                @foreach ($komik->genre as $genre)
+                                    <a href="{{route('filter_genre', ['genre'=>$genre->nama_genre])}}">{{$genre->nama_genre}}</a>,
+                                @endforeach
+                            </h4>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

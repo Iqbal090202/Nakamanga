@@ -33,6 +33,10 @@ class KomikController extends Controller
 
     public function store(Request $request)
     {
+        // $this->validate($request, [
+		// 	'file' => 'required|mimes:jpeg,png,jpg|max:5048',
+		// 	'keterangan' => 'required',
+		// ]);
         $file = $request->file('file');
 
 		$cover = time().$request->judul_komik."-".$file->getClientOriginalName();

@@ -54,9 +54,9 @@
         <div class="card-body">
           <div class="row">
             @foreach ($komik as $k)
-              <div class="col-md-4">
+              <div class="col-lg-4">
                 <div class="text-center">
-                  <a href="{{route('detail', ['id'=>$k->id])}}"><img src="/data_gambar/cover/{{$k->cover}}" width="170" height="250"></a>
+                  <a href="{{route('detail', ['id'=>$k->id])}}"><img class="img-fluid" src="/data_gambar/cover/{{$k->cover}}" width="170" height="250"></a>
                 </div>
                   <div id="title_manga" class="mb-1"><a href="{{route('detail', ['id'=>$k->id])}}">{{$k->judul_komik}}</a>
                   </div>
@@ -75,8 +75,8 @@
     </div>
 
 <!-- Populer Start -->
-    <div class="col-md-3">
-      <div class="card" id="manga_populer" style="width: 18rem;">
+    <div class="col-md-4">
+      <div class="card" id="manga_populer">
         <div class="card-body" id="judul_panel">
           <h5 class="card-title">Manga Populer</h5>
         </div>
