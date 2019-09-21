@@ -10,16 +10,16 @@
 @section('konten')
 
 <!-- BANNER START -->
-<div class="container ">
+<div class="container">
+  <br>
   <div class="row">
     <div class="col-md-8">
-
-      <h3 id="judul_manga"><strong class="text-uppercase"> List Genre </strong></h3>
-
-    <br>
-    <!-- Content Start -->
-  
-      <div class="row">
+     <div class="card" id="card_banner">
+        <div class="card-header" id="banner_top">
+          <h4>List Genre</h4>
+        </div>
+        <div class="card-body" id="banner_home">
+            <div class="row">
           @foreach ($genre as $g)
           <div class="col-md-6">
               <ul class="list-group" id="list_genre">
@@ -28,35 +28,24 @@
           </div>
           @endforeach
       </div>
-    </div>
-    <!-- Content END -->
-  
-  
-    <!-- Populer Start -->
-    <div class="col-md-4">
-      
-      <div class="panel panel-primary" id="populer">
-        <div class="panel-body">
-          <h3 class="text-on-pannel" id="populer4"><strong class="text-uppercase"> Populer </strong></h3>
-          <ul>
-            <li>
-              <a href="#">Shokugeki No Soma</a>
-            </li>
-            <li>
-              <a href="#">Shokugeki No Soma</a>
-            </li>
-            <li>
-              <a href="#">Shokugeki No Soma</a>
-            </li>
-            <li>
-              <a href="#">Shokugeki No Soma</a>
-            </li> 
-          </ul>
         </div>
       </div>
-
     </div>
-  <!-- Populer END -->
+    <!-- Content END -->
+      <div class="col-md-4">
+      <div class="card" id="manga_populer">
+        <div class="card-body" id="judul_panel">
+          <h5 class="card-title">Manga Populer</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          @foreach ($komik2 as $k2)
+            <li class="list-group-item">
+              <a href="/detail/{{$k2->id}}"><h6 class="font_panel">{{$k2->judul_komik}}</h6></a>
+            </li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
   
 <!-- BANNER END -->
 

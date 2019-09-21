@@ -175,11 +175,17 @@ body {
     border: 1px solid #002155;
 }
 
-.btn-warning {
+.btn {
     color: white;
     background-color: #060af8;
     border-color: #060af8;
 }
+.btn:hover {
+    color: white;
+    background-color: #8365bc;
+    border-color: #8365bc;
+}
+
 
 #linkNavbar>.active>a{
     color: #fff;
@@ -353,6 +359,7 @@ body {
 }
 #card_banner {
   border:solid 1px #002155;
+  background: #002155;
 }
 #banner_top {
     color:#8365bc;
@@ -372,4 +379,19 @@ body {
 .alert-primary {
     background-color: #002155;
     border-color: #002155;
+}
+.dropdown>.btn{
+    width: 155px;
+}
+.dropdown-menu.show {
+    display: block;
+    background:#00183e;
+    color:#c2c2c2;
+}
+.dropdown-item {
+    color:#c2c2c2;
+}
+.dropdown-item:hover {
+    color:#c2c2c2;
+    background-color: #002155;
 }

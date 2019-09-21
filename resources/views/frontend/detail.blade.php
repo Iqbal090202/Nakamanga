@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="text-right">
-                                <button type="button" class="btn btn-primary text-white" id="unduh">
+                                <button type="button" class="btn btn-warning text-white" id="unduh">
                                     <i class="fa fa-download"></i>
                                 </button>
                             </div>
