@@ -8,7 +8,7 @@ a:hover {
 }
 
 body {
-    background-image: url('/img/bgnew2.png');
+    background-image: url('/img/background_2.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -114,7 +114,10 @@ body {
     font-size: 17px;
 }
 #title_manga>a:hover {
-    color: blue;
+    color: #8365bc;
+}
+#title_manga>h5 {
+    color:#c2c2c2;
 }
 #judul_panel {
     color:#8365bc;
@@ -141,11 +144,11 @@ body {
 
 }
 .list-group-item a {
-    color:#8365bc;
+    color:#c2c2c2;
     
 }
 .list-group-item a:hover {
-    color:white;
+    color:#8365bc;
     
 }
 
@@ -159,7 +162,7 @@ body {
     padding-left: 20px;
 }
 #genre_manga>a:hover {
-    color: blue;
+    color: #8365bc;
 }
 
 #judul_manga {
@@ -365,4 +368,8 @@ body {
 .detail-komik>.list-group-item:hover {
     border: 0; 
     background-color: #002155;
+}
+.alert-primary {
+    background-color: #002155;
+    border-color: #002155;
 }
