@@ -56,7 +56,7 @@
             @foreach ($komik as $k)
               <div class="col-lg-4">
                 <div class="text-center">
-                  <a href="{{route('detail', ['id'=>$k->id])}}"><img class="img-fluid" src="/data_gambar/cover/{{$k->cover}}" width="170" height="250"></a>
+                  <a href="{{route('detail', ['id'=>$k->id])}}"><img src="/data_gambar/cover/{{$k->cover}}" width="170" height="250"></a>
                 </div>
                   <div id="title_manga" class="mb-1"><a href="{{route('detail', ['id'=>$k->id])}}">{{$k->judul_komik}}</a>
                   </div>
