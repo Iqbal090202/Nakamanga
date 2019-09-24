@@ -1,18 +1,13 @@
 <!-- Menghubungkan dengan view template master -->
 @extends('/frontend/layouts/master')
 
-<!-- isi bagian judul halaman -->
-<!-- cara penulisan isi section yang pendek -->
-
-
-<!-- isi bagian konten -->
-<!-- cara penulisan isi section yang panjang -->
 @section('konten')
 
 	<!-- BANNER START -->
 <div class="container isiDasar">
   <div class="row mt-3">
 
+    {{-- banner --}}
     <div class="col-md-8">
       <div class="card" id="card_banner">
         <div class="card-header" id="banner_top">
@@ -54,7 +49,7 @@
         <div class="card-body">
           <div class="row">
             @foreach ($komik as $k)
-              <div class="col-lg-4">
+              <div class="col-lg-4 card-manga">
                 <div class="text-center">
                   <a href="{{route('detail', ['id'=>$k->id])}}"><img src="/data_gambar/cover/{{$k->cover}}" width="170" height="250"></a>
                 </div>
@@ -82,8 +77,17 @@
         </div>
         <ul class="list-group list-group-flush">
           @foreach ($komik2 as $k2)
-            <li class="list-group-item">
+            <li class="list-group-item judul-pop">
               <a href="/detail/{{$k2->id}}"><h6 class="font_panel">{{$k2->judul_komik}}</h6></a>
+            </li>
+            <li class="list-group-item detail-pop">
+              <h6 class="font_panel">author: {{$k2->author}}</h6>
+              <h6 class="font_panel">status: {{$k2->status}}</h6>
+              <h6 class="font_panel">genre: 
+                @foreach ($k2->genre as $g2)
+                  <a href="/filter/{{$g2->nama_genre}}">{{$g2->nama_genre}}</a>,
+                @endforeach
+              </h6>
             </li>
           @endforeach
         </ul>
