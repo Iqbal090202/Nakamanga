@@ -3,8 +3,8 @@
 @section('isi')
     
     <div class="container">
-            <div class="card mt-5">
-                <div class="card-header text-center">
+            <div class="card mt-5" id="bungkus">
+                <div class="card-header text-center" id="banner_top">
                     CRUD Data Komik - <strong>UBAH DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
                 </div>
                 <div class="card-body">

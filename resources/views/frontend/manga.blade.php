@@ -74,7 +74,7 @@
                 </div><br>
                 <div class="row">
                     <div class="col-md-12">
-                        <button class="btn " type="button"><label class="fa fa-search"></label>Search</button>
+                        <button class="btn" type="button"><label class="fa fa-search"></label>Search</button>
                     </div>
                 </div>
 

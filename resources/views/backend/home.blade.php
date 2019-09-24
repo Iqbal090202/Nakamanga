@@ -2,6 +2,8 @@
 
 @section('isi')
     
-    haiii
+    <body class="bg_awal">
+    	
+    </body>
 
 @endsection

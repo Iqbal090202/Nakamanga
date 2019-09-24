@@ -3,11 +3,11 @@
 @section('isi')
     
     <div class="container">
-            <div class="card mt-5">
-                <div class="card-header text-center">
+            <div class="card mt-5" id="bungkus">
+                <div class="card-header text-center" id="banner_top">
                     CRUD Data Komik - <strong>TAMBAH DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
                 </div>
-                <div class="card-body">
+                <div class="card_komik card-body">
                     <a href="/komik" class="btn btn-primary">Kembali</a>
                     <br/>
                     <br/>
@@ -71,7 +71,7 @@
 
                         <div class="form-group">
                             <label>Cover</label>
-                            <div class="custom-file">
+                            <div class="custom-file" id="search_cover">
                                 <input type="file" name="file" class="custom-file-input" id="cover">
                                 <label class="custom-file-label" for="cover">Pilih Cover</label>
                             </div>

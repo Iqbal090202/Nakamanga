@@ -4,7 +4,7 @@
     <div class="row isiRow">
         <div class="col-sm-12">
             <div class="container">
-                <div class="card mt-5">
+                <div class="card_komik card mt-5">
                     <div class="card-body">
                         <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Gambar</h5>

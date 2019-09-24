@@ -4,7 +4,7 @@
     <div class="row isiRow">
         <div class="col-sm-12">
             <div class="container">
-                <div class="card mt-5">
+                <div class="card_komik card mt-5">
                     <div class="card-body">
                         <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Komik</h5>
@@ -12,7 +12,7 @@
                         <br><br>
 
                         <div class="datatable">
-                            <table id="dtBasicExample" class="table table-striped table-bordered table" cellspacing="0" width="100%">
+                            <table id="dtBasicExample" class="table_komik table table-striped table-bordered table" cellspacing="0" width="100%">
                                 <thead class="thead">
                                     <tr>
                                         <th class="th-sm text-center">Judul Komik</th>
