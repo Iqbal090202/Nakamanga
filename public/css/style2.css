@@ -390,7 +390,9 @@ body {
     border-color: #002155;
 }
 
-.dropdown>.btn {
+.dropdown>.btn,
+.selectpicker,
+.option_select {
     width: 155px;
 }
 
@@ -398,6 +400,29 @@ body {
     display: block;
     background: #00183e;
     color: #c2c2c2;
+}
+
+.option_select {
+    color: #c2c2c2;
+}
+
+.selectpicker>.option_select:hover {
+    color: #c2c2c2;
+    background-color: green;
+}
+
+#btn_huruf,
+.btn {
+    margin-right: 5px;
+}
+
+#label_filter {
+    width: 155px;
+    color: #c2c2c2;
+    border-bottom: solid 2px #c2c2c2;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
 }
 
 .dropdown-item {
