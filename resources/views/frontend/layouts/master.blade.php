@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/nakamanga.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
     
 
@@ -20,7 +21,7 @@
   <nav class="navbar stiky-top navbar-expand-lg navbar-dark" id="nav_head">
     <div class="container">
       <a href="{{route('frontHome')}}">
-          <img src="/img/NAKAMA_BARU.png" width="150" height="50" alt="Logo Nakamanga">
+          <img src="/img/NAKAMA_BARU.png" width="150" height="50" alt="Logo Nakamanga" id="logo-nakamanga">
       </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,19 +30,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="mr-auto"></ul>
       <ul class="navbar-nav mr-2" id="linkNavbar">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+        <li class="nav-item {{ $active['home'] }}">
+          <a class="nav-link text-white" href="/">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/manga">Manga</a>
+        <li class="nav-item {{ $active['manga'] }}">
+          <a class="nav-link text-white" href="/manga">Manga</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/list_genre">Genre</a>
+        <li class="nav-item {{ $active['genre'] }}">
+          <a class="nav-link text-white" href="/list_genre">Genre</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" method="post" action="/filter">
         {{ csrf_field() }}
-        <input id="search" class="form-control mr-sm-2" name="cari" type="search" placeholder="Cari Manga..." aria-label="Search">
+        <input id="search" class="form-control mr-sm-2" name="cari" type="search" placeholder="Cari Manga..." autocomplete="off">
         <button class="btn" id="btnCari" type="submit">
           <i class="fa fa-search"></i>
         </button>
@@ -53,7 +54,6 @@
 <!-- Header End -->
 
 @yield('konten')
-
 
  <!-- Footer Start -->
 

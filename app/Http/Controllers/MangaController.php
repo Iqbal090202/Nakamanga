@@ -15,8 +15,11 @@ class MangaController extends Controller
 {
     public function index()
     {
+        $active['home'] = '';
+		$active['manga'] = 'active';
+		$active['genre'] = '';
         $komik = Komik::orderBy('judul_komik')->get();
-        return view('/frontend/manga', ['komik' => $komik]);
+        return view('/frontend/manga', ['komik' => $komik, 'active' => $active]);
     }
 
     public function judulDesc()
@@ -27,6 +30,9 @@ class MangaController extends Controller
 
     public function detail($id)
     {
+        $active['home'] = '';
+		$active['manga'] = 'active';
+		$active['genre'] = '';
         $komik = Komik::find($id);
         $komik->views = $komik->views + 1;
         $komik->save();
@@ -34,12 +40,16 @@ class MangaController extends Controller
         $chapter = Chapter::where('komik_id', $id)->orderBy('ch', 'desc')->get();
         return view('/frontend/detail', [
             'komik' => $komik,
-            'chapter' => $chapter
+            'chapter' => $chapter,
+            'active' => $active
         ]);
     }
 
     public function baca($komik_id, $id)
     {
+        $active['home'] = '';
+		$active['manga'] = 'active';
+		$active['genre'] = '';
         $komik = Komik::find($komik_id);
         $chapter = Chapter::find($id);
         $user = User::find($chapter->user_id);
@@ -49,15 +59,19 @@ class MangaController extends Controller
             'komik' => $komik,
             'chapter' => $chapter,
             'user' => $user,
-            'gambar' => $gambar
+            'gambar' => $gambar,
+            'active' => $active
         ]);
     }
 
     public function filter_c(Request $request)
     {
+        $active['home'] = '';
+		$active['manga'] = 'active';
+		$active['genre'] = '';
         $komik = Komik::where('judul_komik', 'like', '%'.$request->cari.'%')->get();
         
-        return view('/frontend/manga', ['komik' => $komik]);
+        return view('/frontend/manga', ['komik' => $komik, 'active' => $active]);
     }
 
     public function filter_g($g)

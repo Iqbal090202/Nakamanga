@@ -14,7 +14,7 @@
   <br>
   <div class="row">
     <div class="col-md-8">
-     <div class="card" id="card_banner">
+      <div class="card mb-3" id="card_banner">
         <div class="card-header" id="banner_top">
           <h4>List Genre</h4>
         </div>
