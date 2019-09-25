@@ -16,68 +16,51 @@
                         <h4 class="card-title judul_manga">Advance Filter</h4>
                     </div>
             <div class="card-body">
+                <form action="{{route('ad_filter')}}" method="post" id="ad_filter">
                 <div class="row">
-                    <div class="col-md-2">
+                        {{ csrf_field() }}
+                    <div class="col-md-3">
                         <label id="label_filter">Mangaka</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info">
-                          <option class="option_select"></option>
-                          <option class="option_select">Toronto</option>
-                          <option class="option_select">Bucharest</option>
-                          <option class="option_select">Paris</option>  
+                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="author">
+                            <option class="option_select" value="all">-</option>
+                            @foreach ($komikall as $k)
+                            <option class="option_select" value="{{$k->author}}">{{$k->author}}</option>
+                            @endforeach
                         </select>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <label id="label_filter">Tahun Rilis</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info">
-                          <option class="option_select"></option>
-                          <option class="option_select">Toronto</option>
-                          <option class="option_select">Bucharest</option>
-                          <option class="option_select">Paris</option>  
+                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="tahun">
+                            <option class="option_select" value="all">-</option>
+                            @foreach ($komikall as $k)
+                            <option class="option_select" value="{{$k->tahun}}">{{$k->tahun}}</option>
+                            @endforeach
                         </select>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <label id="label_filter">Status</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info">
-                          <option class="option_select"></option>
-                          <option class="option_select">Toronto</option>
-                          <option class="option_select">Bucharest</option>
-                          <option class="option_select">Paris</option>  
+                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="status">
+                            <option class="option_select" value="all">-</option>
+                            <option class="option_select" value="ongoing">ongoing</option>
+                            <option class="option_select" value="completed">completed</option>
                         </select>
                     </div>
-                    <div class="col-md-2">
-                        <label id="label_filter">Genre 1</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info">
-                          <option class="option_select"></option>
-                          <option class="option_select">Toronto</option>
-                          <option class="option_select">Bucharest</option>
-                          <option class="option_select">Paris</option>  
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label id="label_filter">Genre 2</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info">
-                          <option class="option_select"></option>
-                          <option class="option_select">Toronto</option>
-                          <option class="option_select">Bucharest</option>
-                          <option class="option_select">Paris</option>  
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label id="label_filter">Genre 3</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info">
-                          <option class="option_select"></option>
-                          <option class="option_select">Toronto</option>
-                          <option class="option_select">Bucharest</option>
-                          <option class="option_select">Paris</option>  
+                    <div class="col-md-3">
+                        <label id="label_filter">Genre</label>
+                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="genre">
+                            <option class="option_select" value="all">-</option>
+                            @foreach ($genre as $g)
+                            <option class="option_select" value="{{$g->nama_genre}}">{{$g->nama_genre}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div><br>
                 <div class="row">
                     <div class="col-md-12">
-                        <button class="btn" type="button"><label class="fa fa-search"></label>Search</button>
+                        <button id="btn-af" class="btn form-control" type="submit"><label class="fa fa-search"></label> Search</button>
                     </div>
                 </div>
-
+                </form>
             </div>
         </div>
 
@@ -134,7 +117,7 @@
                 </div>
             </div>
         </div>
-     </div>
+    </div>
 
         </div>
     </div>

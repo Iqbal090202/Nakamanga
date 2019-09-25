@@ -64,5 +64,6 @@ Route::get('/list_genre', 'ListGenreController@index')->name('list_genre');
 Route::get('/manga', 'MangaController@index')->name('manga');
 Route::get('/detail/{id}', 'MangaController@detail')->name('detail');
 Route::get('/baca/{komik_id}/{id}', 'MangaController@baca');
+Route::post('/ad_filter', 'MangaController@ad_filter')->name('ad_filter');
 Route::post('/filter', 'MangaController@filter_c')->name('filter_cari');
 Route::get('/filter/{genre}', 'MangaController@filter_g')->name('filter_genre');
