@@ -14,6 +14,7 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+
 .bg_awal {
     background-image: url('/img/landing3.gif');
     background-size: 100%;
@@ -120,14 +121,17 @@ body {
     font-family: heebo, sans-serif;
     font-size: 17px;
 }
+
 #title_manga>a:hover {
     color: #8365bc;
 }
+
 #title_manga>h5 {
-    color:#c2c2c2;
+    color: #c2c2c2;
 }
+
 #judul_panel {
-    color:#8365bc;
+    color: #8365bc;
     background-color: #002155;
     border-bottom: 2px solid #8365bc;
     padding-top: 2px;
@@ -135,13 +139,16 @@ body {
     padding-right: 5px;
     padding-left: 5px;
 }
-#manga_populer{
-    border:solid 1px #002155;
+
+#manga_populer {
+    border: solid 1px #002155;
 }
+
 .list-group-item:hover {
     background-color: #00183e;
-    border:solid 1px #00183e;
+    border: solid 1px #00183e;
 }
+
 .list-group-item {
     background-color: #002155;
     padding-top: 1px;
@@ -150,13 +157,15 @@ body {
     padding-left: 3px;
 
 }
+
 .list-group-item a {
-    color:#c2c2c2;
-    
+    color: #c2c2c2;
+
 }
+
 .list-group-item a:hover {
-    color:#8365bc;
-    
+    color: #8365bc;
+
 }
 
 #genre_manga,
@@ -165,9 +174,12 @@ body {
     font-size: 14px;
     padding-bottom: 10px;
 }
-#genre_manga,#title_manga{
+
+#genre_manga,
+#title_manga {
     padding-left: 20px;
 }
+
 #genre_manga>a:hover {
     color: #8365bc;
 }
@@ -187,6 +199,7 @@ body {
     background-color: #060af8;
     border-color: #060af8;
 }
+
 .btn:hover {
     color: white;
     background-color: #8365bc;
@@ -194,7 +207,7 @@ body {
 }
 
 
-#linkNavbar>.active>a{
+#linkNavbar>.active>a {
     color: #fff;
     background-color: #8e0000;
     border-radius: 5px;
@@ -358,16 +371,19 @@ body {
 #img_footer {
     padding-left: 40px;
 }
+
 #banner_home {
-  padding: 5px 5px 5px 5px;
-  background: #002155;
+    padding: 5px 5px 5px 5px;
+    background: #002155;
 }
+
 #card_banner {
-  border:solid 1px #002155;
-  background: #002155;
+    border: solid 1px #002155;
+    background: #002155;
 }
+
 #banner_top {
-    color:#8365bc;
+    color: #8365bc;
     background-color: #002155;
     border-bottom: 2px solid #8365bc;
     padding-top: 2px;
@@ -378,34 +394,43 @@ body {
 
 .detail-komik>.list-group-item,
 .detail-komik>.list-group-item:hover {
-    border: 0; 
+    border: 0;
     background-color: #002155;
 }
+
 .alert-primary {
     background-color: #002155;
     border-color: #002155;
 }
-.selectpicker,.option_select{
+
+.selectpicker,
+.option_select {
     width: 155px;
 }
+
 .dropdown-menu.show {
     display: block;
-    background:#00183e;
-    color:#c2c2c2;
+    background: #00183e;
+    color: #c2c2c2;
 }
+
 .option_select {
-    color:#c2c2c2;
+    color: #c2c2c2;
 }
+
 .selectpicker>.option_select:hover {
-    color:#c2c2c2;
+    color: #c2c2c2;
     background-color: green;
 }
-#btn_huruf,.btn{
+
+#btn_huruf,
+.btn {
     margin-right: 5px;
 }
+
 #label_filter {
     width: 155px;
-    color:#c2c2c2;
+    color: #c2c2c2;
     border-bottom: solid 2px #c2c2c2;
     font-weight: bold;
     font-style: italic;
@@ -413,126 +438,159 @@ body {
 }
 
 .user_card {
-            height: 400px;
-            width: 350px;
-            margin-top: auto;
-            margin-bottom: auto;
-            background: #002155;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 5px;
+    height: 400px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #002155;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
 
-        }
-        .brand_logo_container {
-            position: absolute;
-            height: 170px;
-            width: 170px;
-            top: -75px;
-            border-radius: 50%;
-            background: #00183e;
-            padding: 10px;
-            text-align: center;
-        }
-        .brand_logo {
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-        .form_container {
-            margin-top: 50px;
-        }
-        .login_btn {
-            width: 100%;
-            background: #c0392b !important;
-            color: white !important;
-        }
-        .login_btn:focus {
-            box-shadow: none !important;
-            outline: 0px !important;
-        }
-        .login_container {
-            padding: 0 2rem;
-        }
-        .input-group-text {
-            background: #060af8 !important;
-            color: #c2c2c2 !important;
-            border: 0 !important;
-            border-radius: 0.25rem 0 0 0.25rem !important;
-        }
-        .input_user,
-        .input_pass:focus {
-            box-shadow: none !important;
-            outline: 0px !important;
-        }
-        .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-            background-color: #060af8 !important;
-        }
-        #input_login {
-            padding-left: 47px;
-        }
-        #input_pw {
-            padding-left: 47px;
-        }
-        #input_remember {
-            padding-left: 28px;
-        }
-        #form_login {
-            padding-top: 100px;
-        }
-        #remember {
-            color :#c2c2c2;
-        }
-        #input_login>.form-control,.input_user {
-            background-color: #00183e;
-            border:1px solid #00183e;
-        }
-        #top_register{
-            padding-top: 70px;
-        }
-        .register_input>input {
-            width: 190px;
-        }
-        #icon_register>span>i{
-            width: 20px;
-        }
-        .navbar-laravel {
+}
+
+.brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #00183e;
+    padding: 10px;
+    text-align: center;
+}
+
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.form_container {
+    margin-top: 50px;
+}
+
+.login_btn {
+    width: 100%;
+    background: #c0392b !important;
+    color: white !important;
+}
+
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.login_container {
+    padding: 0 2rem;
+}
+
+.input-group-text {
+    background: #060af8 !important;
+    color: #c2c2c2 !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #060af8 !important;
+}
+
+#input_login {
+    padding-left: 47px;
+}
+
+#input_pw {
+    padding-left: 47px;
+}
+
+#input_remember {
+    padding-left: 28px;
+}
+
+#form_login {
+    padding-top: 100px;
+}
+
+#remember {
+    color: #c2c2c2;
+}
+
+#input_login>.form-control,
+.input_user {
+    background-color: #00183e;
+    border: 1px solid #00183e;
+}
+
+#top_register {
+    padding-top: 70px;
+}
+
+.register_input>input {
+    width: 190px;
+}
+
+#icon_register>span>i {
+    width: 20px;
+}
+
+.navbar-laravel {
     background-color: #002155;
-    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
 }
+
 #nav_admin>a {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 }
+
 #nav_admin2>a {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 }
+
 #nav_admin>a:hover {
     color: white;
 }
+
 #nav_admin2>a:hover {
     color: white;
 }
+
 .bg-primary {
-    background-color: #002155!important;
+    background-color: #002155 !important;
 }
+
 .card_komik {
     background-color: #002155;
-    color:#c2c2c2;
+    color: #c2c2c2;
 }
-.table-bordered td, .table-bordered th, .table_komik,.table thead th,.table-bordered {
+
+.table-bordered td,
+.table-bordered th,
+.table_komik,
+.table thead th,
+.table-bordered {
     border: 2px solid #8365bc;
 }
+
 .form-control {
     background-color: #00183e;
-    border:1px solid #00183e;
-    color:#c2c2c2;
-    }
+    border: 1px solid #00183e;
+    color: #c2c2c2;
+}
+
 .dropdown-item {
     color: #c2c2c2;
 }
