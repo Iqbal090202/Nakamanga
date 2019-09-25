@@ -405,7 +405,7 @@ body {
 
 .selectpicker,
 .option_select {
-    width: 155px;
+    width: 243px;
 }
 
 .dropdown-menu.show {
@@ -429,7 +429,7 @@ body {
 }
 
 #label_filter {
-    width: 155px;
+    width: 243px;
     color: #c2c2c2;
     border-bottom: solid 2px #c2c2c2;
     font-weight: bold;

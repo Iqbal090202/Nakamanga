@@ -8,15 +8,15 @@
                     <div class="card-body">
                         <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Genre</h5>
-                        <a class="btn btn-primary" href="{{route('tambah_genre')}}">Tambah Genre</a>
+                        <a class="btn btn-primary" href="{{route('tambah_genre')}}"><i class="fa fa-plus"> Add Genre</i></a>
                         <br><br>
 
                         <div class="datatable">
                             <table id="dtBasicExample" class="table table-striped table-bordered table" cellspacing="0" width="100%">
                                 <thead class="thead">
                                     <tr>
-                                        <th class="th-sm text-center">Nama Genre</th>
-                                        <th class="th-sm text-center">Aksi</th>
+                                        <th class="th-sm text-center">Title Genre</th>
+                                        <th class="th-sm text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody" id="showBuku">
@@ -24,8 +24,8 @@
                                     <tr>
                                         <td class="text-center" id="judul">{{ $g->nama_genre }}</td>
                                         <td class="text-center">
-                                            <a href="/genre/ubah/{{ $g->id }}" class="btn btn-warning text-white editBuku">Edit</a>
-                                            <a href="/genre/hapus/{{ $g->id }}" class="btn btn-danger">Hapus</a>
+                                            <a href="/genre/ubah/{{ $g->id }}" class="btn btn-warning text-white editBuku"><i class="fa fa-pencil"> Edit</i></a>
+                                            <a href="/genre/hapus/{{ $g->id }}" class="btn btn-danger"><i class="fa fa-close"> Delete</i></a>
                                         </td>
                                     </tr>   
                                     @endforeach

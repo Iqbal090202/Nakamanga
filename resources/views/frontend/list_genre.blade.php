@@ -16,7 +16,7 @@
     <div class="col-md-8">
       <div class="card mb-3" id="card_banner">
         <div class="card-header" id="banner_top">
-          <h4>List Genre</h4>
+          <h4>Genre List</h4>
         </div>
         <div class="card-body" id="banner_home">
             <div class="row">

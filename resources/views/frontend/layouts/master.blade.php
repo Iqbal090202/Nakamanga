@@ -42,7 +42,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0" method="post" action="/filter">
         {{ csrf_field() }}
-        <input id="search" class="form-control mr-sm-2" name="cari" type="search" placeholder="Cari Manga..." aria-label="Search">
+        <input id="search" class="form-control mr-sm-2" name="cari" type="search" placeholder="Search Manga..." aria-label="Search">
         <button class="btn" id="btnCari" type="submit">
           <i class="fa fa-search"></i>
         </button>
@@ -77,7 +77,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-3 info">
-                    <h5>Informasi</h5>
+                    <h5>Information</h5>
                     <p> Semua komik di website ini hanya preview dari komik aslinya, mungkin terdapat banyak kesalahan bahasa, nama tokoh, dan alur cerita. Untuk versi aslinya, silahkan beli komiknya jika tersedia di kotamu. </p>
                 </div>
                 <div class="col-sm-3" id="img_footer">

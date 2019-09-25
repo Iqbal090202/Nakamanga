@@ -19,7 +19,7 @@
                 <form action="{{route('ad_filter')}}" method="post" id="ad_filter">
                 <div class="row">
                         {{ csrf_field() }}
-                    <div class="col-md-3">
+                    <div class="col-md-3 text-center">
                         <label id="label_filter">Mangaka</label>
                         <select class="selectpicker btn btn-primary" data-style="btn-info" name="author">
                             <option class="option_select" value="all">-</option>
@@ -28,8 +28,8 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-md-3">
-                        <label id="label_filter">Tahun Rilis</label>
+                    <div class="col-md-3 text-center">
+                        <label id="label_filter">Date Release</label>
                         <select class="selectpicker btn btn-primary" data-style="btn-info" name="tahun">
                             <option class="option_select" value="all">-</option>
                             @foreach ($komikall as $k)
@@ -37,7 +37,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 text-center">
                         <label id="label_filter">Status</label>
                         <select class="selectpicker btn btn-primary" data-style="btn-info" name="status">
                             <option class="option_select" value="all">-</option>
@@ -45,7 +45,7 @@
                             <option class="option_select" value="completed">completed</option>
                         </select>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 text-center">
                         <label id="label_filter">Genre</label>
                         <select class="selectpicker btn btn-primary" data-style="btn-info" name="genre">
                             <option class="option_select" value="all">-</option>
@@ -66,7 +66,7 @@
 
     <div class="card mt-3 mb-4" id="bungkus">
         <div class="card-header" id="banner_top">
-            <h4 class="card-title judul_manga">Daftar Manga</h4>
+            <h4 class="card-title judul_manga">Manga List</h4>
         </div>
         <div class="card-body">
             <div class="row">

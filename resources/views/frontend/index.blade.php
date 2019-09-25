@@ -44,7 +44,7 @@
   
       <div class="card mb-4" id="bungkus">
         <div class="card-header" id="banner_top">
-          <h4 class="card-title">Manga Terupdate</h4>
+          <h4 class="card-title">Manga Update</h4>
         </div>
         <div class="card-body">
           <div class="row">
@@ -73,7 +73,7 @@
     <div class="col-md-4">
       <div class="card" id="manga_populer">
         <div class="card-body" id="judul_panel">
-          <h5 class="card-title">Manga Populer</h5>
+          <h5 class="card-title">Manga Popular</h5>
         </div>
         <ul class="list-group list-group-flush">
           @foreach ($komik2 as $k2)

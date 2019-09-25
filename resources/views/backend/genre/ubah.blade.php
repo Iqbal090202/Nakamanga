@@ -5,10 +5,10 @@
     <div class="container">
             <div class="card mt-5" id="bungkus">
                 <div class="card-header text-center" id="banner_top">
-                    CRUD Data Genre - <strong>UBAH DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
+                    CRUD Data Genre - <strong>CHANGE DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
                 </div>
                 <div class="card-body">
-                    <a href="/genre" class="btn btn-primary">Kembali</a>
+                    <a href="/genre" class="btn btn-primary"><i class="fa fa-arrow-left"> Back</i></a>
                     <br/>
                     <br/>
                     
@@ -17,8 +17,8 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label>Nama Genre</label>
-                            <input type="text" name="nama_genre" class="form-control" placeholder="Nama genre .." value="{{ $genre->nama_genre }}">
+                            <label>Title Genre</label>
+                            <input type="text" name="nama_genre" class="form-control" placeholder="Title genre .." value="{{ $genre->nama_genre }}">
 
                             @if($errors->has('nama_genre'))
                                 <div class="text-danger">
@@ -28,7 +28,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Simpan">
+                            <input type="submit" class="btn btn-success" value="Save">
                         </div>
 
                     </form>

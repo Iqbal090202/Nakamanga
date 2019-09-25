@@ -5,10 +5,10 @@
     <div class="container">
             <div class="card mt-5" id="bungkus">
                 <div class="card-header text-center" id="banner_top">
-                    CRUD Data Komik - <strong>UBAH DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
+                    CRUD Data MANGA - <strong>EDIT DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
                 </div>
                 <div class="card-body">
-                    <a href="/komik" class="btn btn-primary">Kembali</a>
+                    <a href="/komik" class="btn btn-primary"><i class="fa fa-arrow-left"> Back</i></a>
                     <br/>
                     <br/>
                     
@@ -17,8 +17,8 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label>Judul Komik</label>
-                            <input type="text" name="judul_komik" class="form-control" placeholder="Judul komik .." value="{{ $komik->judul_komik }}">
+                            <label>Title Manga</label>
+                            <input type="text" name="judul_komik" class="form-control" placeholder="Title Manga .." value="{{ $komik->judul_komik }}">
 
                             @if($errors->has('judul_komik'))
                                 <div class="text-danger">
@@ -28,8 +28,8 @@
 						</div>
 
                         <div class="form-group">
-                            <label>Sinopsis</label>
-                            <textarea name="sinopsis" class="form-control" placeholder="Sinopsis ..">{{ $komik->sinopsis }}</textarea>
+                            <label>Synopsis</label>
+                            <textarea name="sinopsis" class="form-control" placeholder="Synopsis ..">{{ $komik->sinopsis }}</textarea>
 
                             @if($errors->has('sinopsis'))
                                 <div class="text-danger">
@@ -50,8 +50,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Tahun</label>
-                            <input type="year" name="tahun" class="form-control" placeholder="Tahun .." value="{{ $komik->tahun }}">
+                            <label>Year</label>
+                            <input type="year" name="tahun" class="form-control" placeholder="Year .." value="{{ $komik->tahun }}">
 
                             @if($errors->has('tahun'))
                                 <div class="text-danger">
@@ -71,10 +71,10 @@
 
                         <div class="form-group">
                             <img src="/data_gambar/cover/{{$komik->cover}}" class="img-thumbnail img-fluid"><br>
-                            <label>File Gambar</label>
+                            <label>File Image</label>
                             <div class="custom-file">
                                 <input type="file" name="file" class="custom-file-input" id="cover" value="{{ $komik->cover }}">
-                                <label class="custom-file-label" for="cover">Pilih Cover</label>
+                                <label class="custom-file-label" for="cover">Choose Cover</label>
                             </div>
 
                             @if($errors->has('file'))
@@ -85,7 +85,7 @@
 						</div>
 
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Simpan">
+                            <input type="submit" class="btn btn-success" value="Save">
                         </div>
 
                     </form>

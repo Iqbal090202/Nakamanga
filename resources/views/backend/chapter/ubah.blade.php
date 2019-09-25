@@ -5,10 +5,10 @@
     <div class="container">
             <div class="card mt-5" id="bungkus">
                 <div class="card-header text-center" id="banner_top">
-                    CRUD Data Komik - <strong>UBAH DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
+                    CRUD Data Manga - <strong>CHANGE DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
                 </div>
                 <div class="card-body">
-                    <a href="/chapter" class="btn btn-primary">Kembali</a>
+                    <a href="/chapter" class="btn btn-primary"><i class="fa fa-arrow-left"> Back</i></a>
                     <br/>
                     <br/>
                     
@@ -40,7 +40,7 @@
 
                         <input type="hidden" name="user_id" class="form-control" value="{{ Auth::user()->id }}">
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Simpan">
+                            <input type="submit" class="btn btn-success" value="Save">
                         </div>
 
                     </form>
