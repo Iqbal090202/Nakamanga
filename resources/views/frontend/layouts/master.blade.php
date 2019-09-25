@@ -82,7 +82,23 @@
                 </div>
                 <div class="col-sm-3" id="img_footer">
                     <br><br>
-                    <img src="/img/logo/logo_3.png" width="250" height="50">
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <a href="#">
+                            <img src="/img/logo_sosmed/discord.png" width="50" height="50" alt="Logo discord">
+                          </a>
+                        </div>
+                        <div class="col-sm-4">
+                          <a href="#">
+                            <img src="/img/logo_sosmed/ig.png" width="50" height="50" alt="Logo discord">
+                          </a>
+                        </div>
+                        <div class="col-sm-4">
+                          <a href="#">
+                            <img src="/img/logo_sosmed/gmail.png" width="50" height="50" alt="Logo discord">
+                          </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
