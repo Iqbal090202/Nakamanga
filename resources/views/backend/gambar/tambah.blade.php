@@ -19,7 +19,7 @@
                         <div class="form-group">
                             <label>File Gambar</label>
                             <div class="custom-file">
-                                <input type="file" name="file" class="custom-file-input" id="customFile">
+                                <input type="file" name="file[]" class="custom-file-input" id="customFile" multiple>
                                 <label class="custom-file-label" for="customFile">Pilih file</label>
                             </div>
 

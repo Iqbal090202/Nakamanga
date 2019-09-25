@@ -55,7 +55,7 @@ Route::get('/gambar/tambah/{komik_id}/{ch}/{id}', 'GambarController@tambah')->na
 Route::post('/gambar/store', 'GambarController@store')->name('store_gambar');
 Route::get('/gambar/ubah/{komik_id}/{ch}/{id}/{gid}', 'GambarController@ubah');
 Route::post('/gambar/update/{id}', 'GambarController@update')->name('update_gambar');
-Route::get('/gambar/hapus/{komik_id}/{ch}/{id}', 'GambarController@hapus')->name('hapus_gambar');
+Route::get('/gambar/hapus/{komik_id}/{ch}/{id}/{gid}', 'GambarController@hapus')->name('hapus_gambar');
 
 // ------------------------- frontend -------------------------- //
 
