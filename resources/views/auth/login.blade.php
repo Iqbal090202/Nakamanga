@@ -32,7 +32,7 @@
 
                         <div class="input-group mb-2" id="input_pw">
                             <div class="input-group-append" id="icon_register">
-                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
                             </div>
 
                             <div class="register_input">

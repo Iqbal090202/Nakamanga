@@ -63,7 +63,7 @@
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <label id="label_filter">Blank</label>
+                        <label id="label_filter">Genre 3</label>
                         <select class="selectpicker btn btn-primary" data-style="btn-info">
                           <option class="option_select"></option>
                           <option class="option_select">Toronto</option>

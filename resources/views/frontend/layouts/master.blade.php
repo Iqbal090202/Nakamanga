@@ -21,7 +21,7 @@
   <nav class="navbar stiky-top navbar-expand-lg navbar-dark" id="nav_head">
     <div class="container">
       <a href="{{route('frontHome')}}">
-          <img src="/img/NAKAMA_BARU.png" width="150" height="50" alt="Logo Nakamanga" id="logo-nakamanga">
+          <img src="/img/logo/logo_3.png" width="250" height="50" alt="Logo Nakamanga" id="logo-nakamanga">
       </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
         <li class="">
           <a class="nav-link" href="/manga">Manga</a>
         </li>
-        <li class="">
+        <li class=" ">
           <a class="nav-link" href="/list_genre">Genre</a>
         </li>
       </ul>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-sm-3" id="img_footer">
                     <br><br>
-                    <img src="/img/NAKAMA_BARU.png" width="200" height="60">
+                    <img src="/img/logo/logo_3.png" width="250" height="50">
                 </div>
             </div>
         </div>
