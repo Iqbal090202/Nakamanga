@@ -22,24 +22,24 @@ class GambarController extends Controller
 
     public function store(Request $request)
     {
-        // $this->validate($request, [
-		// 	'file' => 'required|mimes:jpeg,png,jpg|max:2048',
-		// 	'keterangan' => 'required',
-		// ]);
-
 		// menyimpan data file yang diupload ke variabel $file
-		$file = $request->file('file');
+        $file = $request->file('file');
 
-		$nama_gambar = time()."_".$request->chapter_id."-".$file->getClientOriginalName();
+        if(count($request->file('file')) > 0) {
+            foreach ($file as $f) {
 
-      	// isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload = 'data_gambar/komik-'.$request->komik_id.'/ch-'.$request->ch;
-		$file->move($tujuan_upload,$nama_gambar); 
+                $nama_gambar = time()."_".$request->chapter_id."-".$f->getClientOriginalName();
 
-        Gambar::create([
-            'chapter_id' => $request->chapter_id,
-            'nama_gambar' => $nama_gambar,
-        ]);
+                // isi dengan nama folder tempat kemana file diupload
+                $tujuan_upload = 'data_gambar/komik-'.$request->komik_id.'/ch-'.$request->ch;
+                $f->move($tujuan_upload,$nama_gambar); 
+        
+                Gambar::create([
+                    'chapter_id' => $request->chapter_id,
+                    'nama_gambar' => $nama_gambar,
+                ]);
+            }
+        }
 
         return redirect(route('gambar', ['komik_id'=>$request->komik_id,'ch'=>$request->ch,'id'=>$request->chapter_id])); 
     }
@@ -68,12 +68,12 @@ class GambarController extends Controller
         return redirect(route('gambar', ['komik_id'=>$request->komik_id,'ch'=>$request->ch,'id'=>$request->chapter_id])); 
     }
 
-    public function hapus($komik_id, $ch, $id)
+    public function hapus($komik_id, $ch, $id, $gid)
     {
-        $gambar = Gambar::where('id',$id)->first();
+        $gambar = Gambar::find($gid);
 	    File::delete('data_gambar/komik-'.$komik_id.'ch-'.$ch.'/'.$gambar->nama_gambar);
 	    // hapus data
-	    Gambar::where('id',$id)->delete();
+	    Gambar::find($gid)->delete();
 
         return redirect()->back();
     }
