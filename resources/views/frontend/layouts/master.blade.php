@@ -39,6 +39,9 @@
         <li class=" ">
           <a class="nav-link" href="/list_genre">Genre</a>
         </li>
+        <li class=" ">
+          <a class="nav-link" href="/request">Request</a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" method="post" action="/filter">
         {{ csrf_field() }}
@@ -80,20 +83,20 @@
                     <h5>Information</h5>
                     <p> Semua komik di website ini hanya preview dari komik aslinya, mungkin terdapat banyak kesalahan bahasa, nama tokoh, dan alur cerita. Untuk versi aslinya, silahkan beli komiknya jika tersedia di kotamu. </p>
                 </div>
-                <div class="col-sm-3" id="img_footer">
-                    <br><br>
+                <div class="col-sm-3">
+                    <h5>Social Media</h5>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" id="img_footer">
                           <a href="#">
                             <img src="/img/logo_sosmed/discord.png" width="50" height="50" alt="Logo discord">
                           </a>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" id="img_footer">
                           <a href="#">
                             <img src="/img/logo_sosmed/ig.png" width="50" height="50" alt="Logo discord">
                           </a>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" id="img_footer">
                           <a href="#">
                             <img src="/img/logo_sosmed/gmail.png" width="50" height="50" alt="Logo discord">
                           </a>

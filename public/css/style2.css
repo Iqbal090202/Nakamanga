@@ -370,12 +370,28 @@ body {
 
 #img_footer {
     padding-left: 40px;
-    padding-top: 57px;
+    padding-top: 47px;
 }
 
 #banner_home {
     padding: 5px 5px 5px 5px;
     background: #002155;
+}
+.bannerr {
+    background: #002155;
+    width: 200px;
+}
+#banner_rumah {
+    padding-left: 250px;
+
+}
+#banner_req{
+    max-height: 280px;
+}
+.credit {
+    font-style: italic;
+    font-weight: bold;
+    color:#c2c2c2;
 }
 
 #card_banner {
@@ -594,4 +610,7 @@ body {
 
 .dropdown-item {
     color: #c2c2c2;
+}
+.font_request {
+    color:#c2c2c2;
 }
