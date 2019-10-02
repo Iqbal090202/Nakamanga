@@ -21,6 +21,7 @@ class CreateKomikTable extends Migration
             $table->enum('status', ['ongoing', 'completed']);
             $table->year('tahun');
             $table->string('cover');
+            $table->integer('views');
             $table->timestamps();
         });
     }
