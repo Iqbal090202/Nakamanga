@@ -381,14 +381,12 @@ body {
 }
 
 .bannerr {
-    background: #002155;
-    width: 200px;
+    width: 100%;
 }
 
-#banner_rumah {
+/* #banner_rumah {
     padding-left: 250px;
-
-}
+} */
 
 #banner_req {
     max-height: 280px;

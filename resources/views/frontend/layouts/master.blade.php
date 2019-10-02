@@ -99,12 +99,12 @@
                       </div>
                       <div class="col-sm-4" id="img_footer">
                         <a href="#">
-                          <img src="/img/logo_sosmed/ig.png" width="50" height="50" alt="Logo discord">
+                          <img src="/img/logo_sosmed/ig.png" width="50" height="50" alt="Logo instagram">
                         </a>
                       </div>
                       <div class="col-sm-4" id="img_footer">
                         <a href="#">
-                          <img src="/img/logo_sosmed/gmail.png" width="50" height="50" alt="Logo discord">
+                          <img src="/img/logo_sosmed/gmail.png" width="50" height="50" alt="Logo gmail">
                         </a>
                       </div>
                   </div>
