@@ -15,11 +15,10 @@
                     <form method="POST" action="/chapter/store">
 
                         {{ csrf_field() }}
-
-
+                        <input type="hidden" name="ch" value="{{$chapPlus}}">
                         <div class="form-group">
                             <label>Chapter</label>
-                            <input type="number" name="ch" class="form-control" value="{{$chapter->ch+1}}" disabled style="background-color: #00183e;">
+                            <input type="number" class="form-control" value="{{$chapPlus}}" disabled style="background-color: #00183e;">
 
                             @if($errors->has('chapter'))
                                 <div class="text-danger">

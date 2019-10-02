@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style2.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/nakamanga.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
-    
+    <link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet">
 
   </head>
   <body>
@@ -119,6 +119,7 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/popper.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('js/nakamanga.js') }}"></script>
     
   </body>

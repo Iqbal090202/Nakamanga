@@ -15,7 +15,8 @@
                 <form method="POST" action="/chapter/update/{{ $chapter->id }}">
 
                         {{ csrf_field() }}
-
+                        
+                        <input type="hidden" name="ch" value="{{ $chapter->ch }}">
                         <div class="form-group">
                             <label>Chapter</label>
                             <input type="number" name="ch" class="form-control" placeholder="Chapter .." value="{{ $chapter->ch }}" disabled style="background-color: #00183e;">

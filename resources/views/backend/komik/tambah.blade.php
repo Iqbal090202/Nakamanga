@@ -62,7 +62,7 @@
 
                         <div class="form-group">
                             <label for="genre">Genre</label>
-                            <select class="selectpicker" multiple name="genre[]" data-width="100%">
+                            <select class="selectpicker" data-live-search="true" multiple name="genre[]" data-width="100%">
                                 @foreach ($genre as $g)
                                     <option value="{{$g->id}}">{{$g->nama_genre}}</option>
                                 @endforeach

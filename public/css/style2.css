@@ -426,11 +426,6 @@ body {
     border-color: #002155;
 }
 
-.selectpicker,
-.option_select {
-    width: 243px;
-}
-
 .dropdown-menu.show {
     display: block;
     background: #00183e;
@@ -443,7 +438,7 @@ body {
 
 .selectpicker>.option_select:hover {
     color: #c2c2c2;
-    background-color: green;
+    background-color: #8365bc;
 }
 
 #btn_huruf,

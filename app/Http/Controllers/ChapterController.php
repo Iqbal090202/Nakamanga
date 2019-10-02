@@ -45,8 +45,12 @@ class ChapterController extends Controller
     public function tambah($id)
     {
         $chapter = Chapter::orderBy('ch', 'desc')->first();
-        
-        return view('/backend/chapter/tambah', ['komik_id' => $id, 'chapter' => $chapter]);
+        if($chapter == null) {
+            $chapPlus = 1; 
+        } else {
+            $chapPlus = $chapter->ch + 1;
+        }
+        return view('/backend/chapter/tambah', ['komik_id' => $id, 'chapPlus' => $chapPlus]);
     }
 
     public function store(Request $request)

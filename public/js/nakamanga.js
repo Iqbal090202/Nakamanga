@@ -4,6 +4,7 @@ $('#logo-nakamanga').animate({
     left: 0,
     opacity: 1
 }, "slow")
+$('#ad_filter').slideDown("slow")
 
 $(window).scroll(function () {
     let scWin = $(this).scrollTop();

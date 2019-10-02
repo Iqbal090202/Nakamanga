@@ -62,7 +62,7 @@
 
                         <div class="form-group">
                             <label for="genre">Genre</label>
-                            <select class="selectpicker" multiple name="genre[]" data-width="100%">
+                            <select class="selectpicker" data-live-search="true" multiple name="genre[]" data-width="100%">
                                 @foreach ($genre as $g)
                                     <option value="{{$g->id}}">{{$g->nama_genre}}</option>
                                 @endforeach
@@ -71,7 +71,7 @@
 
                         <div class="form-group">
                             <img src="/data_gambar/cover/{{$komik->cover}}" class="img-thumbnail img-fluid"><br>
-                            <label>File Image</label>
+                            <label>Cover</label>
                             <div class="custom-file">
                                 <input type="file" name="file" class="custom-file-input" id="cover" value="{{ $komik->cover }}">
                                 <label class="custom-file-label" for="cover">Choose Cover</label>
