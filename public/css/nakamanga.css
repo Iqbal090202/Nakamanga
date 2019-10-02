@@ -16,8 +16,7 @@
 
 #linkNavbar>.active,
 .nav-item:hover {
-    background-color: #8365bc;
-    color: #002155;
+    color: #fff;
 }
 
 .detail-pop {
@@ -29,4 +28,20 @@
     padding-left: 5%;
     background-color: #8365bc;
     color: #002155;
+}
+
+#scrl-up {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    left: 94%;
+    top: 88%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #8365bc;
+    color: #fff;
 }

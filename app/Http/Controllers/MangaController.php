@@ -15,14 +15,12 @@ class MangaController extends Controller
 {
     public function index()
     {
-        $active['home'] = '';
-		$active['manga'] = 'active';
-        $active['genre'] = '';
+        $judul = 'manga';
         $komikall = Komik::all();
         $genre = Genre::all();
         
         $komik = Komik::orderBy('judul_komik')->get();
-        return view('/frontend/manga', ['komik' => $komik, 'active' => $active, 'genre' => $genre, 'komikall' =>$komikall]);
+        return view('/frontend/manga', ['komik' => $komik, 'judul' => $judul, 'genre' => $genre, 'komikall' =>$komikall]);
     }
 
     public function judulDesc()
@@ -33,9 +31,7 @@ class MangaController extends Controller
 
     public function detail($id)
     {
-        $active['home'] = '';
-		$active['manga'] = 'active';
-		$active['genre'] = '';
+        $judul = 'manga';
         $komik = Komik::find($id);
         $komik->views = $komik->views + 1;
         $komik->save();
@@ -44,15 +40,13 @@ class MangaController extends Controller
         return view('/frontend/detail', [
             'komik' => $komik,
             'chapter' => $chapter,
-            'active' => $active
+            'judul' => $judul
         ]);
     }
 
     public function baca($komik_id, $id)
     {
-        $active['home'] = '';
-		$active['manga'] = 'active';
-		$active['genre'] = '';
+        $judul = 'manga';
         $komik = Komik::find($komik_id);
         $chapter = Chapter::find($id);
         $user = User::find($chapter->user_id);
@@ -63,7 +57,7 @@ class MangaController extends Controller
             'chapter' => $chapter,
             'user' => $user,
             'gambar' => $gambar,
-            'active' => $active
+            'judul' => $judul
         ]);
     }
 
@@ -110,37 +104,46 @@ class MangaController extends Controller
             $komik = Komik::where($query)->get();
         }
         
-        $active['home'] = '';
-		$active['manga'] = 'active';
-        $active['genre'] = '';
+        $judul = 'manga';
         $komikall = Komik::all();
         $genre = Genre::all();
         
-        return view('/frontend/manga', ['komik' => $komik, 'active' => $active, 'genre' => $genre, 'komikall' => $komikall]);
+        return view('/frontend/manga', [
+            'komik' => $komik, 
+            'judul' => $judul, 
+            'genre' => $genre, 
+            'komikall' => $komikall
+        ]);
     }
 
     public function filter_c(Request $request)
     {
-        $active['home'] = '';
-		$active['manga'] = 'active';
-        $active['genre'] = '';
+        $judul = 'manga';
         $komikall = Komik::all();
         $genre = Genre::all();
 
         $komik = Komik::where('judul_komik', 'like', '%'.$request->cari.'%')->get();
-        return view('/frontend/manga', ['komik' => $komik, 'active' => $active, 'genre' => $genre, 'komikall' => $komikall]);
+        return view('/frontend/manga', [
+            'komik' => $komik, 
+            'active' => $active, 
+            'genre' => $genre, 
+            'komikall' => $komikall
+        ]);
     }
 
     public function filter_g($g)
     {
-        $active['home'] = '';
-		$active['manga'] = 'active';
-        $active['genre'] = '';
+        $judul = 'manga';
         $komikall = Komik::all();
         $genre = Genre::all();
 
         $gen = Genre::where('nama_genre', $g)->first();
         $komik = $gen->komik;
-        return view('/frontend/manga', ['komik' => $komik, 'active' => $active, 'genre' => $genre, 'komikall' => $komikall]);
+        return view('/frontend/manga', [
+            'komik' => $komik, 
+            'judul' => $judul, 
+            'genre' => $genre, 
+            'komikall' => $komikall
+        ]);
     }
 }

@@ -207,11 +207,11 @@ body {
 }
 
 
-#linkNavbar>.active>a {
+/* #linkNavbar>.active>a {
     color: #fff;
     background-color: #8e0000;
     border-radius: 5px;
-}
+} */
 
 #linkNavbar>li {
     margin-right: 6px;
@@ -377,21 +377,25 @@ body {
     padding: 5px 5px 5px 5px;
     background: #002155;
 }
+
 .bannerr {
     background: #002155;
     width: 200px;
 }
+
 #banner_rumah {
     padding-left: 250px;
 
 }
-#banner_req{
+
+#banner_req {
     max-height: 280px;
 }
+
 .credit {
     font-style: italic;
     font-weight: bold;
-    color:#c2c2c2;
+    color: #c2c2c2;
 }
 
 #card_banner {
@@ -611,6 +615,7 @@ body {
 .dropdown-item {
     color: #c2c2c2;
 }
+
 .font_request {
-    color:#c2c2c2;
+    color: #c2c2c2;
 }
