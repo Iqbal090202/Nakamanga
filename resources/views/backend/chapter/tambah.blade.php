@@ -19,7 +19,7 @@
 
                         <div class="form-group">
                             <label>Chapter</label>
-                            <input type="number" name="ch" class="form-control" placeholder="Chapter ..">
+                            <input type="number" name="ch" class="form-control" value="{{$chapter->ch+1}}" disabled style="background-color: #00183e;">
 
                             @if($errors->has('chapter'))
                                 <div class="text-danger">
@@ -30,7 +30,7 @@
 						
 						<div class="form-group">
                             <label>Link File PDF</label>
-                            <input type="text" name="link_file" class="form-control" placeholder="Link File ..">
+                            <input type="text" name="link_file" class="form-control" placeholder="Link File .." autocomplete="off">
 
                             @if($errors->has('link_file'))
                                 <div class="text-danger">

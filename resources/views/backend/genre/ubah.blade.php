@@ -18,7 +18,7 @@
 
                         <div class="form-group">
                             <label>Title Genre</label>
-                            <input type="text" name="nama_genre" class="form-control" placeholder="Title genre .." value="{{ $genre->nama_genre }}">
+                            <input type="text" name="nama_genre" class="form-control" placeholder="Title genre .." value="{{ $genre->nama_genre }}" autocomplete="off">
 
                             @if($errors->has('nama_genre'))
                                 <div class="text-danger">

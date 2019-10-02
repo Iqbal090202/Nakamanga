@@ -13,6 +13,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    background-color: #00183e;
 }
 
 .bg_awal {
@@ -114,6 +115,7 @@ body {
 #search {
     background: #00183e;
     border: 1px solid #00183e;
+    color: #aaa;
 }
 
 #title_manga>a {

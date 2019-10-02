@@ -6,7 +6,6 @@
             <div class="container">
                 <div class="card_komik card mt-5">
                     <div class="card-body">
-                        <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Chapter Manga</h5>
                         <a class="btn btn-primary" id="tambahCh" href="{{route('tambah_chapter', ['id' => $kom->id])}}"><i class="fa fa-plus"> Add Chapter</i></a>
                         <br>

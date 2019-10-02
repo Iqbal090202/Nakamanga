@@ -18,7 +18,7 @@
 
                         <div class="form-group">
                             <label>Title Manga</label>
-                            <input type="text" name="judul_komik" class="form-control" placeholder="Title Manga .." value="{{ $komik->judul_komik }}">
+                            <input type="text" name="judul_komik" class="form-control" placeholder="Title Manga .." value="{{ $komik->judul_komik }}" autocomplete="off">
 
                             @if($errors->has('judul_komik'))
                                 <div class="text-danger">
@@ -40,7 +40,7 @@
 						
 						<div class="form-group">
                             <label>Author</label>
-                            <input type="text" name="author" class="form-control" placeholder="Author .." value="{{ $komik->author }}">
+                            <input type="text" name="author" class="form-control" placeholder="Author .." value="{{ $komik->author }}" autocomplete="off">
 
                             @if($errors->has('author'))
                                 <div class="text-danger">
@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label>Year</label>
-                            <input type="year" name="tahun" class="form-control" placeholder="Year .." value="{{ $komik->tahun }}">
+                            <input type="year" name="tahun" class="form-control" placeholder="Year .." value="{{ $komik->tahun }}" autocomplete="off">
 
                             @if($errors->has('tahun'))
                                 <div class="text-danger">

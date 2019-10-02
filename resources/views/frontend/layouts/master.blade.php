@@ -46,7 +46,7 @@
           </ul>
           <form class="form-inline my-2 my-lg-0" method="post" action="/filter">
             {{ csrf_field() }}
-            <input id="search" class="form-control mr-sm-2" name="cari" type="search" placeholder="Search Manga..." aria-label="Search">
+            <input id="search" class="form-control mr-sm-2" name="cari" type="search" placeholder="Search Manga..." aria-label="Search" autocomplete="off">
             <button class="btn" id="btnCari" type="submit">
               <i class="fa fa-search"></i>
             </button>

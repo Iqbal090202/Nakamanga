@@ -68,10 +68,10 @@ class GambarController extends Controller
         return redirect(route('gambar', ['komik_id'=>$request->komik_id,'ch'=>$request->ch,'id'=>$request->chapter_id])); 
     }
 
-    public function hapus($komik_id, $ch, $id, $gid)
+    public function hapus($komik_id, $ch, $gid)
     {
         $gambar = Gambar::find($gid);
-	    File::delete('data_gambar/komik-'.$komik_id.'ch-'.$ch.'/'.$gambar->nama_gambar);
+	    File::delete('data_gambar/komik-'.$komik_id.'/ch-'.$ch.'/'.$gambar->nama_gambar);
 	    // hapus data
 	    Gambar::find($gid)->delete();
 

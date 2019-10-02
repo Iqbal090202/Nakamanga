@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use File;
 
 use App\User;
 use App\Komik;
-use App\Komik_Genre;
 use App\Genre;
-
-use File;
+use App\Chapter;
+use App\Gambar;
+use App\Komik_Genre;
 
 class KomikController extends Controller
 {
@@ -53,14 +54,6 @@ class KomikController extends Controller
             'tahun' => $request->tahun,
             'cover' => $cover,
         ]);
-        $komik = Komik::where('judul_komik', $request->judul_komik)->first();
-
-        foreach ($request->genre as $genre_id) {
-            Komik_Genre::create([
-                'komik_id' => $komik->id,
-                'genre_id' => $genre_id
-            ]);
-        }
 
         return redirect(route('komik')); 
     }
@@ -100,32 +93,27 @@ class KomikController extends Controller
         $komik->cover = $cover;
         $komik->save();
 
-        $k = Komik::where('judul_komik', $request->judul_komik)->first();
-        $kg = Komik_Genre::where('komik_id', $k->id)->get();
-        foreach ($kg as $k_g) {
-            $k_g->delete();
-        }
-        foreach ($request->genre as $genre_id) {
-            Komik_Genre::create([
-                'komik_id' => $k->id,
-                'genre_id' => $genre_id
-            ]);
-        }
-
         return redirect('/komik'); 
     }
 
     public function hapus($id)
     {
-
         $komik = Komik::find($id);
-	    File::delete('data_gambar/cover/'.$komik->judul_komik);
-        $komik->delete();
-
-        $komik_genre = Komik_Genre::where('komik_id', $id)->get();
-        foreach ($komik_genre as $kg) {
-            $kg->delete();
+        $c = Chapter::where('komik_id', $id)->get();
+        foreach ($c as $ch) {
+            $chapter = Chapter::find($ch->id);
+            $gambar = Gambar::where('chapter_id', $chapter->id)->get();
+            File::delete('data_gambar/komik-'.$chapter->komik_id.'/ch-'.$chapter->ch);
+            foreach ($gambar as $g) {
+                File::delete('data_gambar/komik-'.$chapter->komik_id.'/ch-'.$chapter->ch.'/'.$g->nama_gambar);
+                $g->delete();
+            }
+            $chapter->delete();
         }
+
+        File::delete('data_gambar/cover/'.$komik->cover);
+
+        $komik->delete();
 
         return redirect(route('komik'));
     }

@@ -6,7 +6,6 @@
             <div class="container">
                 <div class="card_komik card mt-5">
                     <div class="card-body">
-                        <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Genre</h5>
                         <a class="btn btn-primary" href="{{route('tambah_genre')}}"><i class="fa fa-plus"> Add Genre</i></a>
                         <br><br>

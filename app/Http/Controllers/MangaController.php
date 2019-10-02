@@ -51,13 +51,25 @@ class MangaController extends Controller
         $chapter = Chapter::find($id);
         $user = User::find($chapter->user_id);
         $gambar = Gambar::where('chapter_id', $id)->get();
-        
+        $chapPrev = Chapter::where(['komik_id'=>$komik_id, 'ch'=>$chapter->ch-1])->first();
+        if($chapPrev == null) {
+            $chap['prev'] = $chapter->ch;
+        } else {
+            $chap['prev'] = $chapPrev->ch;
+        }
+        $chapNext = Chapter::where(['komik_id'=>$komik_id, 'ch'=>$chapter->ch+1])->first();
+        if($chapNext == null) {
+            $chap['next'] = $chapter->ch;
+        } else {
+            $chap['next'] = $chapNext->ch;
+        }
         return view('/frontend/baca', [
             'komik' => $komik,
             'chapter' => $chapter,
             'user' => $user,
             'gambar' => $gambar,
-            'judul' => $judul
+            'judul' => $judul,
+            'chap' => $chap
         ]);
     }
 

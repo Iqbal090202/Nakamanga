@@ -6,7 +6,6 @@
             <div class="container">
                 <div class="card_komik card mt-5">
                     <div class="card-body">
-                        <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Gambar</h5>
                         <a href="/chapter" class="btn btn-secondary">Kembali</a>
                         <a class="btn btn-primary" href="{{route('tambah_gambar', ['komik_id' => $komik_id, 'ch' => $ch, 'chapter_id' => $chapter_id])}}">Tambah Gambar</a>
@@ -26,7 +25,7 @@
                                         <td class="text-center" id="judul">{{ $g->nama_gambar }}</td>
                                         <td class="text-center">
                                             <a href="/gambar/ubah/{{ $komik_id }}/{{ $ch }}/{{$chapter_id}}/{{ $g->id }}" class="btn btn-warning text-white">Edit</a>
-                                            <a href="/gambar/hapus/{{ $komik_id }}/{{ $ch }}/{{$chapter_id}}/{{ $g->id }}" class="btn btn-danger">Hapus</a>
+                                            <a href="/gambar/hapus/{{ $komik_id }}/{{ $ch }}/{{ $g->id }}" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     @endforeach
