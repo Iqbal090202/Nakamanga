@@ -35,7 +35,7 @@
                                         <td class="text-center">
                                             <a href="/gambar/{{ $c->komik_id }}/{{ $c->ch }}/{{ $c->id }}" class="btn btn-info text-white"><i class="fa fa-info-circle"> Detail</i></a>
                                             <a href="/chapter/ubah/{{ $c->id }}" class="btn btn-warning text-white"><i class="fa fa-pencil"> Edit</i></a>
-                                            <a href="/chapter/hapus/{{ $c->id }}" class="btn btn-danger"><i class="fa fa-close"> Delete</i></a>
+                                            <a onClick="hapusChapter({{$c->id}});" class="btn btn-danger text-white"><i class="fa fa-close"> Delete</i></a>
                                         </td>
                                     </tr>   
                                     @endforeach

@@ -85,7 +85,9 @@
 						</div>
 
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Save">
+                            <button id="submitKomik" type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"> Save</i>
+                            </button>
                         </div>
 
                     </form>

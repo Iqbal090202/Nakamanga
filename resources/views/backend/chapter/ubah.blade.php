@@ -41,7 +41,9 @@
 
                         <input type="hidden" name="user_id" class="form-control" value="{{ Auth::user()->id }}">
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Save">
+                            <button id="submitChapter" type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"> Save</i>
+                            </button>
                         </div>
 
                     </form>
