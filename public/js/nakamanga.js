@@ -22,10 +22,12 @@ $('#scrl-up').on('click', function () {
     }, 1000)
 })
 
-// if ($('.page').attr('id', 'manga')) {
-//     $('#linkManga').attr('class', 'active')
-// } else if ($('.page').attr('id', 'genre')) {
-//     $('#linkGenre').attr('class', 'active')
-// } else if ($('.page').attr('id', 'request')) {
-//     $('#linkRequest').attr('class', 'active')
-// }
+if ($('.page').attr('id') == 'home') {
+    $('#linkHome').attr('class', 'active')
+} else if ($('.page').attr('id') == 'manga') {
+    $('#linkManga').attr('class', 'active')
+} else if ($('.page').attr('id') == 'genre') {
+    $('#linkGenre').attr('class', 'active')
+} else if ($('.page').attr('id') == 'request') {
+    $('#linkRequest').attr('class', 'active')
+}
