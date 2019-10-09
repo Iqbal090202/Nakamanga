@@ -96,4 +96,5 @@ class ChapterController extends Controller
 
         return redirect(route('chapter'));
     }
+    
 }

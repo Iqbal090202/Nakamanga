@@ -31,3 +31,18 @@ if ($('.page').attr('id') == 'home') {
 } else if ($('.page').attr('id') == 'request') {
     $('#linkRequest').attr('class', 'active')
 }
+
+
+for (let a = 1; a <= 9; a++) {
+    $('#judul-' + a).mouseleave(function () {
+        $('#detail-' + a).fadeOut()
+        $('#down-' + a).removeAttr('class')
+        $('#down-' + a).attr('class', 'fa fa-arrow-down pull-right pr-2 text-white')
+    })
+
+    $('#down-' + a).click(function () {
+        $('#detail-' + a).slideDown()
+        $(this).removeAttr('class')
+        $(this).attr('class', 'fa fa-minus pull-right pr-2 text-white')
+    })
+}

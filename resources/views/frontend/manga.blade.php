@@ -20,7 +20,7 @@
                 <div class="row">
                         {{ csrf_field() }}
                     <div class="col-md-3 text-center">
-                        <label id="label_filter">Mangaka</label>
+                        <label id="label_filter">Author</label>
                         <select class="selectpicker" data-style="btn-info" name="author" data-width="90%" data-live-search="true">
                             <option class="option_select" value="all">-</option>
                             @foreach ($komikall as $k)
@@ -57,7 +57,7 @@
                 </div><br>
                 <div class="row">
                     <div class="col-md-12">
-                        <button id="btn-af" class="btn form-control" type="submit"><label class="fa fa-search"></label> Search</button>
+                        <button id="btn-af" class="btn form-control" type="submit"><i class="fa fa-search"></i> Search</button>
                     </div>
                 </div>
                 </form>

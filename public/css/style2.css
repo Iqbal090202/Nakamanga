@@ -167,7 +167,10 @@ body {
 
 .list-group-item a:hover {
     color: #8365bc;
+}
 
+.list-group-item .link-rdrc:hover {
+    color: #002155;
 }
 
 #genre_manga,

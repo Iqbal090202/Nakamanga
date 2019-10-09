@@ -35,13 +35,25 @@
       <div class="col-md-4">
       <div class="card" id="manga_populer">
         <div class="card-body" id="judul_panel">
-          <h5 class="card-title">Manga Populer</h5>
+          <h5 class="card-title">Daftar Populer</h5>
         </div>
         <ul class="list-group list-group-flush">
+          <?php $id = 1; ?>
           @foreach ($komik2 as $k2)
-            <li class="list-group-item">
-              <a href="/detail/{{$k2->id}}"><h6 class="font_panel">{{$k2->judul_komik}}</h6></a>
-            </li>
+                <li class="list-group-item judul-pop" id="judul-{{$id}}">
+                  <a href="/detail/{{$k2->id}}"><span class="font_panel pl-3">{{$k2->judul_komik}}</span></a>
+                  <i class="fa fa-arrow-down pull-right pr-2 text-white" id="down-{{$id}}"></i>
+                  <div class="list-group-item detail-pop m-0 p-2" id="detail-{{$id}}">
+                    <h6 class="font_panel">author: {{$k2->author}}</h6>
+                    <h6 class="font_panel">status: {{$k2->status}}</h6>
+                    <h6 class="font_panel">genre: 
+                      @foreach ($k2->genre as $g2)
+                        <a href="/filter/{{$g2->nama_genre}}" class="link-rdrc">{{$g2->nama_genre}}</a>,
+                      @endforeach
+                    </h6>
+                  </div>
+                </li>
+            <?php $id++; ?>
           @endforeach
         </ul>
       </div>
