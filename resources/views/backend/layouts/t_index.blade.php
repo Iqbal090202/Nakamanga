@@ -100,7 +100,7 @@
     <script src="{{ asset('js/nakamanga.js') }}"></script>
     <script type="text/javascript">
         $('.table').DataTable({
-            "scrollX": true
+            scrollX: true,
         });
 
         $('#selectKomik').change(function () {

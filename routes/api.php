@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('komik', 'API\KomikApiController@index');
+Route::get('komik/{judul}', 'API\KomikApiController@search');
