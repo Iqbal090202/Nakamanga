@@ -47,47 +47,21 @@
             </div>
           </div>
         </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <h4 class="credit text-center">Shortcut</h4>
-          <div class="card-body" id="banner_rumah">
-            <div class="row">
-              <div class="col-sm-4"></div>
-              <div class="col-sm-4">
-                <div id="banner" class="bannerr carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="img/cover1.jpg" alt="First slide" id="banner_req">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="img/cover2.jpg" alt="Second slide" id="banner_req">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="img/cover3.png" alt="Third slide" id="banner_req">
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
-                    <span class="carousel-control-prev" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
-                    <span class="carousel-control-next" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-              </div>
-              <div class="col-sm-4"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
       
       </div>
 
 
       <br>
     </div>
+        <div class="col-md-4">
+          <div class="card" id="iklan">
+            <div class="card-body text-center" id="judul_iklan">
+              <img src="img/iklan/iklan5.jpg" width="300" height="250">
+              <img src="img/iklan/iklan6.gif" width="300" height="250">
+              <img src="img/iklan/iklan4.gif" width="300" height="250">
+            </div>
+          </div>
+        </div>
 
   </div>
 </div>

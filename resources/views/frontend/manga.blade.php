@@ -75,7 +75,7 @@
                     <div class="text-center">
                         <a href="{{route('detail', ['id'=>$k->id])}}"><img src="/data_gambar/cover/{{$k->cover}}" width="200" height="280"></a>
                     </div>
-                        <div id="title_manga">
+                        <div id="title_manga" class="text-center">
                             <a href="{{route('detail', ['id'=>$k->id])}}">{{$k->judul_komik}}</a>
                         </div><br>
                         

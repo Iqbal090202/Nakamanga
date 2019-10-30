@@ -146,6 +146,7 @@ body {
 
 #manga_populer {
     border: solid 1px #002155;
+    width: 102%;
 }
 
 .list-group-item:hover {
@@ -171,9 +172,6 @@ body {
     color: #8365bc;
 }
 
-.list-group-item .link-rdrc:hover {
-    color: #002155;
-}
 
 #genre_manga,
 #genre_manga>a {
@@ -184,7 +182,6 @@ body {
 
 #genre_manga,
 #title_manga {
-    padding-left: 20px;
 }
 
 #genre_manga>a:hover {
@@ -619,3 +616,35 @@ body {
 .font_request {
     color: #c2c2c2;
 }
+.fa-minus-circle:before{
+    color: #8365bc;
+}
+#iklan {
+    border: solid 1px #002155;
+}
+#judul_iklan{
+    color: #8365bc;
+    background-color: #002155;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+#judul_iklan img {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+#iklan_detail{
+    padding-top: 25%;
+}
+#iklan_baca{
+    padding-top: 4%;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+
+    background-color: #060af8;
+    border-radius: 4px;
+    color: #fff;
+    width: 100%;
+}
+

@@ -17,13 +17,13 @@
           <div id="banner" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="img/kaguya.jpg" alt="First slide">
+                <img class="d-block w-100" src="img/BANNER.jpg" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/kaguya.jpg" alt="Second slide">
+                <img class="d-block w-100" src="img/BANNER2.jpg" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/kaguya.jpg" alt="Third slide">
+                <img class="d-block w-100" src="img/BANNER.jpg" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
@@ -53,9 +53,9 @@
                 <div class="text-center">
                   <a href="{{route('detail', ['id'=>$k->id])}}"><img src="http://localhost/nakamanga/public/data_gambar/cover/{{$k->cover}}" width="170" height="250"></a>
                 </div>
-                  <div id="title_manga" class="mb-1"><a href="{{route('detail', ['id'=>$k->id])}}">{{$k->judul_komik}}</a>
+                  <div id="title_manga" class="mb-1 text-center"><a href="{{route('detail', ['id'=>$k->id])}}">{{$k->judul_komik}}</a>
                   </div>
-                  <div id="genre_manga">
+                  <div id="genre_manga" class="text-center">
                     Genre :
                     @foreach ($k->genre as $g)
                       <a href="/filter/{{$g->nama_genre}}">{{$g->nama_genre}}</a>,
@@ -65,9 +65,8 @@
             @endforeach
           </div>
         </div>
-        <div class="card-footer">
-        </div>
       </div>
+
       
   <!-- Content END -->
     </div>
@@ -83,7 +82,7 @@
           @foreach ($komik2 as $k2)
                 <li class="list-group-item judul-pop" id="judul-{{$id}}">
                   <a href="/detail/{{$k2->id}}"><span class="font_panel pl-3">{{$k2->judul_komik}}</span></a>
-                  <i class="fa fa-arrow-down pull-right pr-2 text-white" id="down-{{$id}}"></i>
+                  <i class="fa fa-minus-circle pull-right pr-2 text-white" id="down-{{$id}}"></i>
                   <div class="list-group-item detail-pop m-0 p-2" id="detail-{{$id}}">
                     <h6 class="font_panel">author: {{$k2->author}}</h6>
                     <h6 class="font_panel">status: {{$k2->status}}</h6>
@@ -97,8 +96,24 @@
             <?php $id++; ?>
           @endforeach
         </ul>
+      </div><br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card" id="iklan">
+            <div class="card-body text-center" id="judul_iklan">
+              <img src="img/iklan/iklan5.jpg" width="300" height="250">
+              <img src="img/iklan/iklan6.gif" width="300" height="250">
+              <img src="img/iklan/iklan4.gif" width="300" height="250">
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
+ 
+
+    
   <!-- Populer END -->
   </div>
 </div>
