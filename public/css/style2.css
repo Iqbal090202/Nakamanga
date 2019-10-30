@@ -7,7 +7,9 @@ a:hover {
     text-decoration: none;
 }
 
+
 body {
+    background-color: #00183e;
     background-image: url('/img/background_2.png');
     background-size: 100%;
     background-repeat: no-repeat;
