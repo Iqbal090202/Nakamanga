@@ -18,8 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('komik', 'API\KomikController@index');
-Route::get('komik/{judul}', 'API\KomikController@getByName');
-Route::get('komik/{kmk_id}', 'API\KomikController@getById');
+Route::get('komik/judul/{judul}', 'API\KomikController@getByName');
+Route::get('komik/id/{kmk_id}', 'API\KomikController@getById');
+Route::get('kUpdate', 'API\KomikController@getKomikHome');
 
 Route::get('genre', 'API\GenreController@index');
 

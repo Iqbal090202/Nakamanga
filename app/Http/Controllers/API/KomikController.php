@@ -16,7 +16,35 @@ class KomikController extends Controller
      */
     public function index()
     {
-        $komik = Komik::find();
+        $komik = Komik::all();
+        // $i = 0;
+        // foreach ($komik as $k) {
+        //     $genre = $k->genre;
+        //     foreach ($genre as $g ) {
+        //         $gen[$i] = $g;
+        //         $i++;
+        //     }
+        // }
+        if($komik->count() > 0) {
+            return response()->json($komik, 200);
+        } else {
+            return response()->json(['message' => 'gagal'], 400);
+        }
+    }
+
+    public function getKomikHome()
+    {
+        $komik = Komik::orderBy('created_at', 'desc')->limit(8)->get();
+        if($komik->count() > 0) {
+            return response()->json($komik, 200);
+        } else {
+            return response()->json(['message' => 'gagal'], 400);
+        }
+    }
+
+    public function getById($id) 
+    {
+        $komik = komik::find($id);
         if($komik->count() > 0) {
             return response()->json($komik, 200);
         } else {
