@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>NAKAMANGA</title>
+    <title>Admin Nakamanga</title>
 
     <!-- Scripts -->
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
@@ -18,11 +18,12 @@
 
     <!-- Styles -->
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('sweetalert2/dist/sweetalert2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('DataTables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style2.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
+    <link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -95,12 +96,11 @@
     <script src="{{ asset('DataTables/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('sweetalert2/dist/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('js/nakamanga.js') }}"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('.table').DataTable({
-                "scrollX": true
-            });
+        $('.table').DataTable({
+            scrollX: true,
         });
 
         $('#selectKomik').change(function () {
@@ -118,6 +118,31 @@
             });
 
         });
+
+        function hapusKomik(id){
+            if(confirm("Apakah Anda yakin ?") == true) {
+                let url = "/komik/hapus/"+id
+                $(location).attr('href', url);
+            }
+        }
+        function hapusChapter(id){
+            if(confirm("Apakah Anda yakin ?") == true) {
+                let url = '/chapter/hapus/'+id
+                $(location).attr('href', url);
+            }
+        }
+        function hapusGambar(komik_id,ch,id){
+            if(confirm("Apakah Anda yakin ?") == true) {
+                let url = '/gambar/hapus/'+komik_id+'/'+ch+'/'+id
+                $(location).attr('href', url);
+            }
+        }
+        function hapusGenre(id){
+            if(confirm("Apakah Anda yakin ?") == true) {
+                let url = '/genre/hapus/'+id
+                $(location).attr('href', url);
+            }
+        }
     </script>
 </body>
 </html>

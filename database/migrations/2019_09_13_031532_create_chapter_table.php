@@ -16,7 +16,7 @@ class CreateChapterTable extends Migration
         Schema::create('chapter', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('komik_id');
-            $table->integer('ch');
+            $table->integer('ch')->unique();
             $table->string('link_file');
             $table->integer('user_id');
             $table->timestamps();

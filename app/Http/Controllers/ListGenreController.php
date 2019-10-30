@@ -11,15 +11,13 @@ class ListGenreController extends Controller
 {
     public function index()
     {
-        $active['home'] = '';
-		$active['manga'] = '';
-		$active['genre'] = 'active';
+        $judul = 'genre';
         $genre = Genre::all();
         $komik2 = Komik::orderBy('views', 'desc')->get();
         return view('/frontend/list_genre', [
             'genre' => $genre, 
             'komik2' => $komik2,
-            'active' => $active
+            'judul' => $judul
         ]);
     }
 }

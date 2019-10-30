@@ -8,7 +8,7 @@
                     CRUD Data Gambar - <strong>TAMBAH DATA</strong> - <a href="https://www.malasngoding.com/category/laravel" target="_blank">www.nakamanga.com</a>
                 </div>
                 <div class="card-body">
-                    <a href="/gambar/{{$komik_id}}/{{$ch}}/{{ $chapter_id }}" class="btn btn-primary">Kembali</a>
+                    <a href="/gambar/{{$komik_id}}/{{$ch}}/{{ $chapter_id }}" class="btn btn-primary"><i class="fa fa-arrow-left"> Back</i></a>
                     <br/>
                     <br/>
                     
@@ -34,7 +34,9 @@
                         <input type="hidden" name="chapter_id" class="form-control" value="{{ $chapter_id }}">
                         
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Simpan">
+                            <button id="submitGambar" type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"> Save</i>
+                            </button>
                         </div>
 
                     </form>

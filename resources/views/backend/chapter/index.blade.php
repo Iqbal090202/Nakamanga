@@ -6,7 +6,6 @@
             <div class="container">
                 <div class="card_komik card mt-5">
                     <div class="card-body">
-                        <h3 class="text-center"><a href="https://www.malasngoding.com">www.nakamanga.com</a></h3>
                         <h5 class="text-center my-4">Data Chapter Manga</h5>
                         <a class="btn btn-primary" id="tambahCh" href="{{route('tambah_chapter', ['id' => $kom->id])}}"><i class="fa fa-plus"> Add Chapter</i></a>
                         <br>
@@ -36,7 +35,7 @@
                                         <td class="text-center">
                                             <a href="/gambar/{{ $c->komik_id }}/{{ $c->ch }}/{{ $c->id }}" class="btn btn-info text-white"><i class="fa fa-info-circle"> Detail</i></a>
                                             <a href="/chapter/ubah/{{ $c->id }}" class="btn btn-warning text-white"><i class="fa fa-pencil"> Edit</i></a>
-                                            <a href="/chapter/hapus/{{ $c->id }}" class="btn btn-danger"><i class="fa fa-close"> Delete</i></a>
+                                            <a onClick="hapusChapter({{$c->id}});" class="btn btn-danger text-white"><i class="fa fa-close"> Delete</i></a>
                                         </td>
                                     </tr>   
                                     @endforeach

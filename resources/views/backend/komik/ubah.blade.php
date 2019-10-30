@@ -18,7 +18,7 @@
 
                         <div class="form-group">
                             <label>Title Manga</label>
-                            <input type="text" name="judul_komik" class="form-control" placeholder="Title Manga .." value="{{ $komik->judul_komik }}">
+                            <input type="text" name="judul_komik" class="form-control" placeholder="Title Manga .." value="{{ $komik->judul_komik }}" autocomplete="off">
 
                             @if($errors->has('judul_komik'))
                                 <div class="text-danger">
@@ -40,7 +40,7 @@
 						
 						<div class="form-group">
                             <label>Author</label>
-                            <input type="text" name="author" class="form-control" placeholder="Author .." value="{{ $komik->author }}">
+                            <input type="text" name="author" class="form-control" placeholder="Author .." value="{{ $komik->author }}" autocomplete="off">
 
                             @if($errors->has('author'))
                                 <div class="text-danger">
@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label>Year</label>
-                            <input type="year" name="tahun" class="form-control" placeholder="Year .." value="{{ $komik->tahun }}">
+                            <input type="year" name="tahun" class="form-control" placeholder="Year .." value="{{ $komik->tahun }}" autocomplete="off">
 
                             @if($errors->has('tahun'))
                                 <div class="text-danger">
@@ -62,7 +62,7 @@
 
                         <div class="form-group">
                             <label for="genre">Genre</label>
-                            <select class="selectpicker" multiple name="genre[]" data-width="100%">
+                            <select class="selectpicker" data-live-search="true" multiple name="genre[]" data-width="100%">
                                 @foreach ($genre as $g)
                                     <option value="{{$g->id}}">{{$g->nama_genre}}</option>
                                 @endforeach
@@ -71,7 +71,7 @@
 
                         <div class="form-group">
                             <img src="/data_gambar/cover/{{$komik->cover}}" class="img-thumbnail img-fluid"><br>
-                            <label>File Image</label>
+                            <label>Cover</label>
                             <div class="custom-file">
                                 <input type="file" name="file" class="custom-file-input" id="cover" value="{{ $komik->cover }}">
                                 <label class="custom-file-label" for="cover">Choose Cover</label>
@@ -85,7 +85,9 @@
 						</div>
 
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Save">
+                            <button id="submitKomik" type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"> Save</i>
+                            </button>
                         </div>
 
                     </form>

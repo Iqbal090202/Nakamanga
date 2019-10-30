@@ -15,11 +15,10 @@
                     <form method="POST" action="/chapter/store">
 
                         {{ csrf_field() }}
-
-
+                        <input type="hidden" name="ch" value="{{$chapPlus}}">
                         <div class="form-group">
                             <label>Chapter</label>
-                            <input type="number" name="ch" class="form-control" placeholder="Chapter ..">
+                            <input type="number" class="form-control" value="{{$chapPlus}}" disabled style="background-color: #00183e;">
 
                             @if($errors->has('chapter'))
                                 <div class="text-danger">
@@ -30,7 +29,7 @@
 						
 						<div class="form-group">
                             <label>Link File PDF</label>
-                            <input type="text" name="link_file" class="form-control" placeholder="Link File ..">
+                            <input type="text" name="link_file" class="form-control" placeholder="Link File .." autocomplete="off">
 
                             @if($errors->has('link_file'))
                                 <div class="text-danger">
@@ -42,7 +41,9 @@
                         <input type="hidden" name="user_id" class="form-control" value="{{ Auth::user()->id }}">
                         <input type="hidden" name="komik_id" class="form-control" value="{{ $komik_id }}">
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Save">
+                            <button id="submitChapter" type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"> Save</i>
+                            </button>
                         </div>
 
                     </form>

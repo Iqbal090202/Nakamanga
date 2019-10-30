@@ -15,6 +15,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    background-color: #00183e;
 }
 
 .bg_awal {
@@ -116,6 +117,7 @@ body {
 #search {
     background: #00183e;
     border: 1px solid #00183e;
+    color: #aaa;
 }
 
 #title_manga>a {
@@ -167,7 +169,10 @@ body {
 
 .list-group-item a:hover {
     color: #8365bc;
+}
 
+.list-group-item .link-rdrc:hover {
+    color: #002155;
 }
 
 #genre_manga,
@@ -209,11 +214,11 @@ body {
 }
 
 
-#linkNavbar>.active>a {
+/* #linkNavbar>.active>a {
     color: #fff;
     background-color: #8e0000;
     border-radius: 5px;
-}
+} */
 
 #linkNavbar>li {
     margin-right: 6px;
@@ -379,21 +384,23 @@ body {
     padding: 5px 5px 5px 5px;
     background: #002155;
 }
-.bannerr {
-    background: #002155;
-    width: 200px;
-}
-#banner_rumah {
-    padding-left: 250px;
 
+.bannerr {
+    width: 100%;
 }
-#banner_req{
+
+/* #banner_rumah {
+    padding-left: 250px;
+} */
+
+#banner_req {
     max-height: 280px;
 }
+
 .credit {
     font-style: italic;
     font-weight: bold;
-    color:#c2c2c2;
+    color: #c2c2c2;
 }
 
 #card_banner {
@@ -422,11 +429,6 @@ body {
     border-color: #002155;
 }
 
-.selectpicker,
-.option_select {
-    width: 243px;
-}
-
 .dropdown-menu.show {
     display: block;
     background: #00183e;
@@ -439,7 +441,7 @@ body {
 
 .selectpicker>.option_select:hover {
     color: #c2c2c2;
-    background-color: green;
+    background-color: #8365bc;
 }
 
 #btn_huruf,
@@ -613,6 +615,7 @@ body {
 .dropdown-item {
     color: #c2c2c2;
 }
+
 .font_request {
-    color:#c2c2c2;
+    color: #c2c2c2;
 }

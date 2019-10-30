@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use File;
 
 use App\Chapter;
 use App\Komik;
+use App\Gambar;
 
 class ChapterController extends Controller
 {
@@ -30,9 +32,9 @@ class ChapterController extends Controller
             <td class="text-center" id="judul"><?= $c->ch ?></td>
             <td class="text-center" id="judul"><?= $c->link_file ?></td>
             <td class="text-center">
-                <a href="/gambar/<?= $c->komik_id ?>/<?= $c->ch ?>/<?= $c->id ?>" class="btn btn-info text-white">Lihat</a>
-                <a href="/chapter/ubah/<?= $c->id ?>" class="btn btn-warning text-white editBuku">Edit</a>
-                <a href="/chapter/hapus/<?= $c->id ?>" class="btn btn-danger">Hapus</a>
+                <a href="/gambar/<?= $c->komik_id ?>/<?= $c->ch ?>/<?= $c->id ?>" class="btn btn-info text-white"><i class="fa fa-info-circle"> Detail</i></a>
+                <a href="/chapter/ubah/<?= $c->id ?>" class="btn btn-warning text-white editBuku"><i class="fa fa-pencil"> Edit</i></a>
+                <a href="/chapter/hapus/<?= $c->id ?>" class="btn btn-danger"><i class="fa fa-close"> Delete</i></a>
             </td>
         </tr>   <?php
         endforeach;
@@ -42,7 +44,13 @@ class ChapterController extends Controller
 
     public function tambah($id)
     {
-        return view('/backend/chapter/tambah', ['komik_id' => $id]);
+        $chapter = Chapter::orderBy('ch', 'desc')->first();
+        if($chapter == null) {
+            $chapPlus = 1; 
+        } else {
+            $chapPlus = $chapter->ch + 1;
+        }
+        return view('/backend/chapter/tambah', ['komik_id' => $id, 'chapPlus' => $chapPlus]);
     }
 
     public function store(Request $request)
@@ -78,8 +86,15 @@ class ChapterController extends Controller
     public function hapus($id)
     {
         $chapter = Chapter::find($id);
+        $gambar = Gambar::where('chapter_id', $chapter->id)->get();
+        File::delete('data_gambar/komik-'.$chapter->komik_id.'/ch-'.$chapter->ch);
+        foreach ($gambar as $g) {
+            File::delete('data_gambar/komik-'.$chapter->komik_id.'/ch-'.$chapter->ch.'/'.$g->nama_gambar);
+            $g->delete();
+        }
         $chapter->delete();
 
         return redirect(route('chapter'));
     }
+    
 }

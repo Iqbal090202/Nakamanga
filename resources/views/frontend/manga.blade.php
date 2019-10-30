@@ -20,8 +20,8 @@
                 <div class="row">
                         {{ csrf_field() }}
                     <div class="col-md-3 text-center">
-                        <label id="label_filter">Mangaka</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="author">
+                        <label id="label_filter">Author</label>
+                        <select class="selectpicker" data-style="btn-info" name="author" data-width="90%" data-live-search="true">
                             <option class="option_select" value="all">-</option>
                             @foreach ($komikall as $k)
                             <option class="option_select" value="{{$k->author}}">{{$k->author}}</option>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-3 text-center">
                         <label id="label_filter">Date Release</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="tahun">
+                        <select class="selectpicker" data-style="btn-info" name="tahun" data-width="90%">
                             <option class="option_select" value="all">-</option>
                             @foreach ($komikall as $k)
                             <option class="option_select" value="{{$k->tahun}}">{{$k->tahun}}</option>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-3 text-center">
                         <label id="label_filter">Status</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="status">
+                        <select class="selectpicker" data-style="btn-info" name="status" data-width="90%">
                             <option class="option_select" value="all">-</option>
                             <option class="option_select" value="ongoing">ongoing</option>
                             <option class="option_select" value="completed">completed</option>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-md-3 text-center">
                         <label id="label_filter">Genre</label>
-                        <select class="selectpicker btn btn-primary" data-style="btn-info" name="genre">
+                        <select class="selectpicker" data-style="btn-info" name="genre" data-width="90%" data-live-search="true">
                             <option class="option_select" value="all">-</option>
                             @foreach ($genre as $g)
                             <option class="option_select" value="{{$g->nama_genre}}">{{$g->nama_genre}}</option>
@@ -57,7 +57,7 @@
                 </div><br>
                 <div class="row">
                     <div class="col-md-12">
-                        <button id="btn-af" class="btn form-control" type="submit"><label class="fa fa-search"></label> Search</button>
+                        <button id="btn-af" class="btn form-control" type="submit"><i class="fa fa-search"></i> Search</button>
                     </div>
                 </div>
                 </form>
@@ -84,7 +84,7 @@
             </div>
 
 
-        <div class="text-center">
+        {{-- <div class="text-center">
       <div class="d-inline-block">
             <div class="btn-toolbar mx-auto" role="toolbar">
                 <div class="btn-group mr-2" id="btn_huruf" role="group" aria-label="First group">
@@ -117,7 +117,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
         </div>
     </div>

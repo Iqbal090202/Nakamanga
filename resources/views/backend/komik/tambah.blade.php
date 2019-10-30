@@ -18,7 +18,7 @@
 
                         <div class="form-group">
                             <label>Title Manga</label>
-                            <input type="text" name="judul_komik" class="form-control" placeholder="Title Manga ..">
+                            <input type="text" name="judul_komik" class="form-control" placeholder="Title Manga .." autocomplete="off">
 
                             @if($errors->has('judul_komik'))
                                 <div class="text-danger">
@@ -40,7 +40,7 @@
 						
 						<div class="form-group">
                             <label>Author</label>
-                            <input type="text" name="author" class="form-control" placeholder="Author ..">
+                            <input type="text" name="author" class="form-control" placeholder="Author .." autocomplete="off">
 
                             @if($errors->has('author'))
                                 <div class="text-danger">
@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label>Year</label>
-                            <input type="year" name="tahun" class="form-control" placeholder="Year ..">
+                            <input type="year" name="tahun" class="form-control" placeholder="Year .." autocomplete="off">
 
                             @if($errors->has('tahun'))
                                 <div class="text-danger">
@@ -62,7 +62,7 @@
 
                         <div class="form-group">
                             <label for="genre">Genre</label>
-                            <select class="selectpicker" multiple name="genre[]" data-width="100%">
+                            <select class="selectpicker" data-live-search="true" multiple name="genre[]" data-width="100%">
                                 @foreach ($genre as $g)
                                     <option value="{{$g->id}}">{{$g->nama_genre}}</option>
                                 @endforeach
@@ -84,7 +84,9 @@
 						</div>
 
                         <div class="form-group">
-                            <input id="submitKomik" type="submit" class="btn btn-success" value="Save">
+                            <button id="submitKomik" type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"> Save</i>
+                            </button>
                         </div>
 
                     </form>

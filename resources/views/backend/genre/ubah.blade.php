@@ -18,7 +18,7 @@
 
                         <div class="form-group">
                             <label>Title Genre</label>
-                            <input type="text" name="nama_genre" class="form-control" placeholder="Title genre .." value="{{ $genre->nama_genre }}">
+                            <input type="text" name="nama_genre" class="form-control" placeholder="Title genre .." value="{{ $genre->nama_genre }}" autocomplete="off">
 
                             @if($errors->has('nama_genre'))
                                 <div class="text-danger">
@@ -28,7 +28,9 @@
                         </div>
                         
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success" value="Save">
+                            <button id="submitGenre" type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"> Save</i>
+                            </button>
                         </div>
 
                     </form>

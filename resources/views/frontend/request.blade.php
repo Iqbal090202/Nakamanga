@@ -27,10 +27,10 @@
                         <img src="/img/logo_sosmed/discord.png" width="30" height="30" alt="Logo discord">
                       </a>
                       <a href="#">
-                        <img src="/img/logo_sosmed/facebook.png" width="30" height="30" alt="Logo discord">
+                        <img src="/img/logo_sosmed/facebook.png" width="30" height="30" alt="Logo facebook">
                       </a>
                       <a href="#">
-                        <img src="/img/logo_sosmed/gmail.png" width="30" height="30" alt="Logo discord">
+                        <img src="/img/logo_sosmed/gmail.png" width="30" height="30" alt="Logo gmail">
                       </a>
                     </li>
                   </ul>
@@ -47,41 +47,49 @@
             </div>
           </div>
         </div>
-
-          <div class="col-sm-12">
-            <h4 class="credit text-center">Shortcut</h4>
-        <div class="card-body" id="banner_rumah">
-          <div id="banner" class="bannerr carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="img/cover1.jpg" alt="First slide" id="banner_req">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="credit text-center">Shortcut</h4>
+          <div class="card-body" id="banner_rumah">
+            <div class="row">
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4">
+                <div id="banner" class="bannerr carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="img/cover1.jpg" alt="First slide" id="banner_req">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="img/cover2.jpg" alt="Second slide" id="banner_req">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="img/cover3.png" alt="Third slide" id="banner_req">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+                    <span class="carousel-control-prev" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
+                    <span class="carousel-control-next" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="img/cover2.jpg" alt="Second slide" id="banner_req">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="img/cover3.png" alt="Third slide" id="banner_req">
-              </div>
+              <div class="col-sm-4"></div>
             </div>
-            <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
-              <span class="carousel-control-prev" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
-              <span class="carousel-control-next" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
         </div>
-          </div>
 
+      </div>
+      
       </div>
 
 
       <br>
     </div>
-  </div>
 
+  </div>
 </div>
 
 @endsection

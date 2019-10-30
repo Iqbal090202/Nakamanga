@@ -75,17 +75,16 @@
 
         <br>
         <h4 id="judul_manga">Chapter {{$chapter->ch}}</h4>
-        
         <div class="row">
             <div class="col-md-6 text-center">
-                <button type="button" class="btn btn-info" id="unduh">
-                <span class="glyphicon glyphicon-arrow-left"></span> NEXT Chapter
-                </button>
+                <a href="/baca/{{$komik->id}}/{{$chap['prev']}}" type="button" class="btn btn-info" id="unduh">
+                    <span class="fa fa-arrow-left"></span> PREV Chapter
+                </a>
             </div>
             <div class="col-md-6 text-center">
-                <button type="button" class="btn btn-info" id="unduh">
-                PREV Chapter <span class="glyphicon glyphicon-arrow-right"></span>
-                </button>
+                <a href="/baca/{{$komik->id}}/{{$chap['next']}}" type="button" class="btn btn-info" id="unduh">
+                    NEXT Chapter <span class="fa fa-arrow-right"></span>
+                </a>
             </div>
         </div>
 
