@@ -27,6 +27,12 @@
                         <h5>Date of release</h5>
                         <h5>Status</h5>
                         <h5>Genre</h5>
+                        
+                        <div class="row">
+                        <div class="col-md-12" id="iklan_detail">
+                            <img src="/img/iklan/iklan8.jpg" width="680" height="180">
+                        </div>
+                        </div>
                     </div>
                 </div>
 
@@ -52,6 +58,7 @@
                     </div>
                 </div>
             </div>
+
 
             <br>
 

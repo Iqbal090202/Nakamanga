@@ -56,6 +56,17 @@
             <?php $id++; ?>
           @endforeach
         </ul>
+      </div><br>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card" id="iklan">
+            <div class="card-body text-center" id="judul_iklan">
+              <img src="img/iklan/iklan5.jpg" width="300" height="250">
+              <img src="img/iklan/iklan6.gif" width="300" height="250">
+              <img src="img/iklan/iklan4.gif" width="300" height="250">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   

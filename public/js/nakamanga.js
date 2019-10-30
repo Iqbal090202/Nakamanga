@@ -34,15 +34,14 @@ if ($('.page').attr('id') == 'home') {
 
 
 for (let a = 1; a <= 9; a++) {
-    $('#judul-' + a).mouseleave(function () {
-        $('#detail-' + a).fadeOut()
-        $('#down-' + a).removeAttr('class')
-        $('#down-' + a).attr('class', 'fa fa-arrow-down pull-right pr-2 text-white')
-    })
+    // $('#up-' + a).click(function () {
+    //     $('#detail-' + a).fadeOut()
+    //     $(this).removeAttr('class')
+    //     $(this).attr('class', 'fa fa-plus pull-right pr-2 text-white')
+    //     $(this).attr('id', 'down-'+a)
+    // })
 
     $('#down-' + a).click(function () {
-        $('#detail-' + a).slideDown()
-        $(this).removeAttr('class')
-        $(this).attr('class', 'fa fa-minus pull-right pr-2 text-white')
+        $('#detail-' + a).slideToggle()
     })
 }

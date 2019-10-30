@@ -30,6 +30,12 @@
                         <h5>Date of release</h5>
                         <h5>Status</h5>
                         <h5>Genre</h5>
+
+                        <div class="row">
+                        <div class="col-md-12" id="iklan_baca">
+                            <img src="/img/iklan/iklan7.png" width="680" height="180">
+                        </div>
+                        </div>
                     </div>
                 </div>
 
