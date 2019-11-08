@@ -137,7 +137,7 @@ class MangaController extends Controller
         $komik = Komik::where('judul_komik', 'like', '%'.$request->cari.'%')->get();
         return view('/frontend/manga', [
             'komik' => $komik, 
-            'active' => $active, 
+            'judul' => $judul, 
             'genre' => $genre, 
             'komikall' => $komikall
         ]);
