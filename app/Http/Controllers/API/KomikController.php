@@ -17,14 +17,10 @@ class KomikController extends Controller
     public function index()
     {
         $komik = Komik::all();
-        // $i = 0;
-        // foreach ($komik as $k) {
-        //     $genre = $k->genre;
-        //     foreach ($genre as $g ) {
-        //         $gen[$i] = $g;
-        //         $i++;
-        //     }
-        // }
+        $i = 0;
+        foreach ($komik as $k) {
+            $genre = $k->genre;
+        }
         if($komik->count() > 0) {
             return response()->json($komik, 200);
         } else {

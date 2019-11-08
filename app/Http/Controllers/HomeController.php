@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Banner;
 
 class HomeController extends Controller
 {
@@ -23,8 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-
+        // $banner = Banner::all();
         return view('backend/home');
     }
 }
