@@ -43,6 +43,9 @@
             <li id="linkRequest">
               <a class="nav-link" href="/request">Request</a>
             </li>
+            <li id="linkRequest">
+              <a class="nav-link" href="/police">Privacy Police</a>
+            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0" method="post" action="/filter">
             {{ csrf_field() }}
@@ -69,7 +72,7 @@
     <footer id="myFooter" class="mt-4">
       <div class="container">
           <div class="row">
-              <div class="col-sm-3">
+              <div class="col-sm-4">
                   <h5>Blank</h5>
                   <ul>
                       <!--<li><a href="#">Home</a></li>
@@ -77,19 +80,11 @@
                       <li><a href="#">Downloads</a></li>-->
                   </ul>
               </div>
-              <div class="col-sm-3">
-                  <h5>Blank</h5>
-                  <ul>
-                      <!--<li><a href="#">Company Information</a></li>
-                      <li><a href="#">Contact us</a></li>
-                      <li><a href="#">Reviews</a></li>-->
-                  </ul>
-              </div>
-              <div class="col-sm-3 info">
+              <div class="col-sm-4 info">
                   <h5>Information</h5>
                   <p> Semua komik di website ini hanya preview dari komik aslinya, mungkin terdapat banyak kesalahan bahasa, nama tokoh, dan alur cerita. Untuk versi aslinya, silahkan beli komiknya jika tersedia di kotamu. </p>
               </div>
-              <div class="col-sm-3">
+              <div class="col-sm-4">
                   <h5>Social Media</h5>
                   <div class="row">
                       <div class="col-sm-4" id="img_footer">

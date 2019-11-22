@@ -18,52 +18,28 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="/data_gambar/cover/{{$komik->cover}}" width="90%" height="450">
+                    <img class="img-fluid" src="/data_gambar/cover/{{$komik->cover}}" width="90%" height="450">
                 </div>
 
-                <div class="col-md-3 mt-5">
+                <div class="col-md-8">
                     <div id="title_manga">
-                        <h5>Chapter</h5>
-                        <h5>Post by</h5>
-                        <h5>Posted on</h5>
-                        <h5>Author</h5>
-                        <h5>Date of release</h5>
-                        <h5>Status</h5>
-                        <h5>Genre</h5>
+                        <h5>Chapter <a id="judul_detail5">: {{$chapter->ch}}</a></h5>
+                        <h5>Post by <a id="judul_detail6">: {{$user->name}}</a></h5>
+                        <h5>Posted <a id="judul_detail7">: {{$chapter->created_at->diffForHumans()}}</a></h5>
+                        <h5>Author <a id="judul_detail1">: {{$komik->author}}</a></h5>
+                        <h5>Release <a id="judul_detail2">: {{$komik->tahun}}</a></h5>
+                        <h5>Status <a id="judul_detail3">: {{$komik->status}}</a></h5>
+                        <h5>Genre <a id="judul_detail4">: @foreach ($komik->genre as $genre)
+                            {{$genre->nama_genre}},
+                        @endforeach
+
+                        </a></h5>
 
                         <div class="row">
                         <div class="col-md-12" id="iklan_baca">
-                            <img src="/img/iklan/iklan7.png" width="680" height="180">
+                            <img class="img-fluid" src="/img/iklan/iklan7.png" width="680" height="180">
                         </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-md-1 mt-5">
-                    <div id="title_manga">
-                        <h5>:</h5>
-                        <h5>:</h5>
-                        <h5>:</h5>
-                        <h5>:</h5>
-                        <h5>:</h5>
-                        <h5>:</h5>
-                        <h5>:</h5>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-5">
-                    <div id="title_manga">
-                        <h5>{{$chapter->ch}}</h5>
-                        <h5>{{$user->name}}</h5>
-                        <h5>{{$chapter->created_at->diffForHumans()}}</h5>
-                        <h5>{{$komik->author}}</h5>
-                        <h5>{{$komik->tahun}}</h5>
-                        <h5>{{$komik->status}}</h5>
-                        <h5>
-                        @foreach ($komik->genre as $genre)
-                            {{$genre->nama_genre}},
-                        @endforeach
-                        </h5>
                     </div>
                 </div>
             </div>
